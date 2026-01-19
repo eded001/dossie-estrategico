@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* CONFIGURAÇÃO DE IMPRESSÃO */
         @page {
             size: A4;
             margin: 0;
@@ -41,7 +40,6 @@
             justify-content: space-between;
         }
 
-        /* CORES */
         :root {
             --cs-blue: #002266;
             --cs-amber: #ffcc00;
@@ -49,7 +47,6 @@
             --cs-green-bg: #e6f7e9;
         }
 
-        /* CABEÇALHO */
         .header {
             display: flex;
             justify-content: space-between;
@@ -101,7 +98,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* BOXES */
         .box {
             border: 1px solid #bbb;
             border-radius: 5px;
@@ -127,7 +123,6 @@
             height: 32px;
         }
 
-        /* SUPLENTES */
         .suplentes-row {
             background-color: #f4f6f8;
             border-top: 1px solid #ddd;
@@ -144,7 +139,6 @@
             margin-right: 5px;
         }
 
-        /* GRIDS E TABELAS */
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -195,10 +189,9 @@
         .td-nome {
             font-weight: 600;
             padding-left: 10px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 180px;
+            white-space: normal;
+            line-height: 1.1;
+            word-wrap: break-word;
         }
 
         .td-voto {
@@ -209,7 +202,6 @@
             font-size: 11pt;
         }
 
-        /* RODAPÉ CELSO SABINO */
         .cs-area {
             border: 3px solid var(--cs-amber);
             background: linear-gradient(to right, #fff, #fffbf0);
@@ -290,7 +282,6 @@
 </head>
 
 <body>
-
     <div class="page">
         <div class="header">
             <div class="logo-box">CS</div>
@@ -357,7 +348,7 @@
                     </tr>
                     <tr>
                         <td class="td-pos">3º</td>
-                        <td class="td-nome">Dr. Alisson Guedes (UNIÃO)</td>
+                        <td class="td-nome">Dr. Alisson (UNIÃO)</td>
                         <td class="td-voto">449 (4,02%)</td>
                     </tr>
                     <tr>
@@ -375,79 +366,79 @@
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
-                        <td class="td-nome">Junior de Belém (MDB)</td>
+                        <td class="td-nome">Junior de Belém (MDB) (E)</td>
                         <td class="td-voto">813 (7,17%)</td>
                     </tr>
                     <tr class="row-highlight">
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">Yure (PP)</td>
+                        <td class="td-nome">Yure (PP) (E)</td>
                         <td class="td-voto">719 (6,34%)</td>
                     </tr>
                     <tr class="row-highlight">
                         <td class="td-pos">3º</td>
-                        <td class="td-nome">Lucivaldo Sindicato (PT)</td>
+                        <td class="td-nome">Lucivaldo Sindicato (PT) (E)</td>
                         <td class="td-voto">593 (5,23%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">4º</td>
-                        <td class="td-nome">Lene Barbosa (MDB)</td>
+                        <td class="td-nome">Lene Barbosa (MDB) (E)</td>
                         <td class="td-voto">557 (4,91%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">5º</td>
-                        <td class="td-nome">Didi (MDB)</td>
+                        <td class="td-nome">Didi (MDB) (E)</td>
                         <td class="td-voto">545 (4,81%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">6º</td>
-                        <td class="td-nome">Sandro de Belém (MDB)</td>
+                        <td class="td-nome">Sandro de Belém (MDB) (E)</td>
                         <td class="td-voto">525 (4,63%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">7º</td>
-                        <td class="td-nome">Sandro do Sítio (MDB)</td>
+                        <td class="td-nome">Sandro do Sítio (MDB) (E)</td>
                         <td class="td-voto">496 (4,37%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">8º</td>
-                        <td class="td-nome">Igor Mendes (PP)</td>
+                        <td class="td-nome">Igor Mendes (PP) (E)</td>
                         <td class="td-voto">471 (4,15%)</td>
                     </tr>
                 </table>
                 <table>
                     <tr>
                         <td class="td-pos">9º</td>
-                        <td class="td-nome">Naldo da Colônia (PP)</td>
+                        <td class="td-nome">Naldo da Colônia (PP) (E)</td>
                         <td class="td-voto">451 (3,98%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">10º</td>
-                        <td class="td-nome">Sula (PP)</td>
+                        <td class="td-nome">Sula (PP) (N/E)</td>
                         <td class="td-voto">419 (3,70%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">11º</td>
-                        <td class="td-nome">Bruno de Belém (MDB)</td>
+                        <td class="td-nome">Bruno de Belém (MDB) (N/E)</td>
                         <td class="td-voto">408 (3,60%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">12º</td>
-                        <td class="td-nome">Adalton (MDB)</td>
+                        <td class="td-nome">Adalton (MDB) (N/E)</td>
                         <td class="td-voto">400 (3,53%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">13º</td>
-                        <td class="td-nome">Zé Filho (MDB)</td>
+                        <td class="td-nome">Zé Filho (MDB) (N/E)</td>
                         <td class="td-voto">364 (3,21%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">14º</td>
-                        <td class="td-nome">Joãozinho do Mel (PP)</td>
+                        <td class="td-nome">Joãozinho Mel (PP) (N/E)</td>
                         <td class="td-voto">340 (3,00%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">15º</td>
-                        <td class="td-nome">Raimundo Sindicato (MDB)</td>
+                        <td class="td-nome">Raimundo Sindicato (MDB) (N/E)</td>
                         <td class="td-voto">315 (2,78%)</td>
                     </tr>
                     <tr>
@@ -459,7 +450,7 @@
 
         <div class="grid-2">
             <div class="box">
-                <div class="box-header"><i class="fas fa-university"></i> FEDERAL (TOP 10 LOCAL ELEITOS)</div>
+                <div class="box-header"><i class="fas fa-university"></i> FEDERAL (TOP LOCAL ELEITOS)</div>
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
@@ -468,7 +459,7 @@
                     </tr>
                     <tr>
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">Renilce Nicodemos (MDB)</td>
+                        <td class="td-nome">Renilce (MDB)</td>
                         <td class="td-voto">1.259 (12,73%)</td>
                     </tr>
                     <tr>
@@ -483,44 +474,13 @@
                     </tr>
                     <tr>
                         <td class="td-pos">5º</td>
-                        <td class="td-nome">José Priante (MDB)</td>
+                        <td class="td-nome">Priante (MDB)</td>
                         <td class="td-voto">338 (3,42%)</td>
                     </tr>
-                    <tr>
-                        <td class="td-pos">6º</td>
-                        <td class="td-nome">Elcione Barbalho (MDB)</td>
-                        <td class="td-voto">239 (2,42%)</td>
-                    </tr>
-                    <tr>
-                        <td class="td-pos">7º</td>
-                        <td class="td-nome">Alessandra Haber (MDB)</td>
-                        <td class="td-voto">185 (1,87%)</td>
-                    </tr>
-                    <tr>
-                        <td class="td-pos">8º</td>
-                        <td class="td-nome">Keniston (MDB)</td>
-                        <td class="td-voto">142 (1,44%)</td>
-                    </tr>
-                    <tr>
-                        <td class="td-pos">9º</td>
-                        <td class="td-nome">Andreia Siqueira (MDB)</td>
-                        <td class="td-voto">141 (1,43%)</td>
-                    </tr>
-                    <tr>
-                        <td class="td-pos">10º</td>
-                        <td class="td-nome">Olival Marques (MDB)</td>
-                        <td class="td-voto">136 (1,38%)</td>
-                    </tr>
                 </table>
-                <div class="suplentes-row">
-                    <span class="suplentes-label">* SUPLENTES:</span>
-                    Bozola (PP) 1.154 (11,67%) ; Prof. Adion (PT) 146 (1,48%) ; Hélio Leite (UNIÃO) 115 (1,16%) ; Vivi
-                    Reis (PSOL) 100 (1,01%) ; Nilson Pinto (PSDB) 53 (0,54%)
-                </div>
             </div>
-
             <div class="box">
-                <div class="box-header"><i class="fas fa-flag"></i> ESTADUAL (TOP 10 LOCAL ELEITOS)</div>
+                <div class="box-header"><i class="fas fa-flag"></i> ESTADUAL (TOP LOCAL ELEITOS)</div>
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
@@ -547,37 +507,7 @@
                         <td class="td-nome">Ronie Silva (MDB)</td>
                         <td class="td-voto">196 (1,97%)</td>
                     </tr>
-                    <tr>
-                        <td class="td-pos">6º</td>
-                        <td class="td-nome">Chicão (MDB)</td>
-                        <td class="td-voto">179 (1,80%)</td>
-                    </tr>
-                    <tr>
-                        <td class="td-pos">7º</td>
-                        <td class="td-nome">Thiago Araújo (CIDA)</td>
-                        <td class="td-voto">143 (1,44%)</td>
-                    </tr>
-                    <tr>
-                        <td class="td-pos">8º</td>
-                        <td class="td-nome">Diana Belo (MDB)</td>
-                        <td class="td-voto">92 (0,93%)</td>
-                    </tr>
-                    <tr>
-                        <td class="td-pos">9º</td>
-                        <td class="td-nome">Cilene Couto (PSDB)</td>
-                        <td class="td-voto">88 (0,89%)</td>
-                    </tr>
-                    <tr>
-                        <td class="td-pos">10º</td>
-                        <td class="td-nome">Chamonzinho (MDB)</td>
-                        <td class="td-voto">86 (0,87%)</td>
-                    </tr>
                 </table>
-                <div class="suplentes-row">
-                    <span class="suplentes-label">* SUPLENTES:</span>
-                    Sandro de Belém (MDB) 316 (3,18%) ; Dr. Heleno (PP) 277 (2,79%) ; Junior de Belém (MDB) 224 (2,25%)
-                    ; Maria do Carmo (PT) 158 (1,59%) ; Tiago Silva (MDB) 105 (1,06%)
-                </div>
             </div>
         </div>
 
@@ -599,9 +529,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 </body>
 
 </html>

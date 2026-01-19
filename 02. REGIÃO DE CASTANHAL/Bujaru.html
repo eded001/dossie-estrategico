@@ -11,9 +11,23 @@
 
     <style>
         /* CONFIGURAÇÃO DE IMPRESSÃO */
-        @page { size: A4; margin: 0; }
-        * { box-sizing: border-box; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-        body { margin: 0; padding: 0; background: #555; font-family: 'Roboto Condensed', sans-serif; }
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #555;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
 
         .page {
             background-color: white;
@@ -44,6 +58,7 @@
             height: 70px;
             margin-bottom: 10px;
         }
+
         .logo-box {
             background: var(--cs-blue);
             color: var(--cs-amber);
@@ -56,6 +71,7 @@
             align-items: center;
             justify-content: center;
         }
+
         .city-name {
             font-size: 34pt;
             font-weight: 900;
@@ -64,6 +80,7 @@
             line-height: 0.9;
             margin: 0;
         }
+
         .city-meta {
             background: var(--cs-blue);
             color: white;
@@ -85,6 +102,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             margin-bottom: 10px;
         }
+
         .box-header {
             background: var(--cs-blue);
             color: white;
@@ -104,20 +122,30 @@
             grid-template-columns: 1fr 1fr;
             gap: 12px;
         }
+
         .grid-2-inner {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0;
         }
-        .grid-2-inner table:first-child { border-right: 1px solid #ddd; }
 
-        table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+        .grid-2-inner table:first-child {
+            border-right: 1px solid #ddd;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
         td {
             padding: 4px 8px;
             border-bottom: 1px solid #eee;
             vertical-align: middle;
             height: 34px;
         }
+
         .td-pos {
             width: 30px;
             text-align: center;
@@ -126,6 +154,7 @@
             font-size: 8.5pt;
             background: #fcfcfc;
         }
+
         .td-nome {
             font-weight: 600;
             font-size: 8.5pt;
@@ -135,6 +164,7 @@
             word-wrap: break-word;
             color: #222;
         }
+
         .td-voto {
             width: 110px;
             text-align: right;
@@ -143,7 +173,10 @@
             font-family: monospace;
             font-size: 9.5pt;
         }
-        .row-highlight { background: var(--cs-green-bg) !important; }
+
+        .row-highlight {
+            background: var(--cs-green-bg) !important;
+        }
 
         /* SUPLENTES E DADOS */
         .suplentes-row {
@@ -154,7 +187,13 @@
             color: #333;
             line-height: 1.2;
         }
-        .suplentes-label { color: var(--cs-blue); font-weight: 900; text-transform: uppercase; margin-right: 5px; }
+
+        .suplentes-label {
+            color: var(--cs-blue);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-right: 5px;
+        }
 
         /* RODAPÉ AJUSTADO */
         .cs-area {
@@ -168,7 +207,11 @@
             height: 95px;
             overflow: hidden;
         }
-        .cs-info { flex: 1; }
+
+        .cs-info {
+            flex: 1;
+        }
+
         .cs-info h3 {
             margin: 0 0 2px 0;
             color: var(--cs-blue);
@@ -179,8 +222,20 @@
             align-items: center;
             gap: 8px;
         }
-        .cs-data { font-size: 9.5pt; line-height: 1.2; color: #333; }
-        .cs-growth { color: #00802b; font-weight: 900; background: #e6f7e9; padding: 0 4px; border-radius: 3px; }
+
+        .cs-data {
+            font-size: 9.5pt;
+            line-height: 1.2;
+            color: #333;
+        }
+
+        .cs-growth {
+            color: #00802b;
+            font-weight: 900;
+            background: #e6f7e9;
+            padding: 0 4px;
+            border-radius: 3px;
+        }
 
         .chart {
             display: flex;
@@ -190,6 +245,7 @@
             flex-shrink: 0;
             padding-left: 10px;
         }
+
         .bar-group {
             display: flex;
             flex-direction: column;
@@ -199,10 +255,28 @@
             color: #555;
             gap: 4px;
         }
-        .bar { width: 28px; background: var(--cs-blue); border-radius: 3px 3px 0 0; }
-        .bar.old { background: #999; }
 
-        @media print { body { background: none; } .page { margin: 0; box-shadow: none; height: 297mm; } }
+        .bar {
+            width: 28px;
+            background: var(--cs-blue);
+            border-radius: 3px 3px 0 0;
+        }
+
+        .bar.old {
+            background: #999;
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                height: 297mm;
+            }
+        }
     </style>
 </head>
 
@@ -222,12 +296,12 @@
             <table>
                 <tr class="row-highlight">
                     <td class="td-pos">1º</td>
-                    <td class="td-nome" style="font-size: 11pt;">LULA (PT)</td>
+                    <td class="td-nome" style="font-size: 11pt;">LULA (PT) (E)</td>
                     <td class="td-voto" style="font-size: 12pt; width: 220px;">10.518 (57,00%)</td>
                 </tr>
                 <tr>
                     <td class="td-pos">2º</td>
-                    <td class="td-nome" style="font-size: 11pt;">BOLSONARO (PL)</td>
+                    <td class="td-nome" style="font-size: 11pt;">BOLSONARO (PL) (NE)</td>
                     <td class="td-voto" style="font-size: 12pt; width: 220px;">7.935 (43,00%)</td>
                 </tr>
             </table>
@@ -237,19 +311,51 @@
             <div class="box">
                 <div class="box-header"><i class="fas fa-user-tie"></i> GOVERNADOR 2022</div>
                 <table>
-                    <tr class="row-highlight"><td class="td-pos">1º</td><td class="td-nome">HELDER BARBALHO (MDB)</td><td class="td-voto">12.871 (71,9%)</td></tr>
-                    <tr><td class="td-pos">2º</td><td class="td-nome">ZEQUINHA MARINHO (PL)</td><td class="td-voto">4.791 (26,7%)</td></tr>
-                    <tr><td class="td-pos">3º</td><td class="td-nome">ADOLFO OLIVEIRA (PSOL)</td><td class="td-voto">134 (0,75%)</td></tr>
-                    <tr><td class="td-pos">4º</td><td class="td-nome">DR. FELIPE (PRTB)</td><td class="td-voto">52 (0,29%)</td></tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">1º</td>
+                        <td class="td-nome">HELDER BARBALHO (MDB) (E)</td>
+                        <td class="td-voto">12.871 (71,9%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">2º</td>
+                        <td class="td-nome">ZEQUINHA MARINHO (PL) (NE)</td>
+                        <td class="td-voto">4.791 (26,7%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">3º</td>
+                        <td class="td-nome">ADOLFO OLIVEIRA (PSOL) (NE)</td>
+                        <td class="td-voto">134 (0,75%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">4º</td>
+                        <td class="td-nome">DR. FELIPE (PRTB) (NE)</td>
+                        <td class="td-voto">52 (0,29%)</td>
+                    </tr>
                 </table>
             </div>
             <div class="box">
                 <div class="box-header"><i class="fas fa-building"></i> PREFEITO 2024</div>
                 <table>
-                    <tr class="row-highlight"><td class="td-pos">1º</td><td class="td-nome">MIGUEL JÚNIOR (MDB)</td><td class="td-voto">12.001 (63,2%)</td></tr>
-                    <tr><td class="td-pos">2º</td><td class="td-nome">LUCIO BESSA (PT)</td><td class="td-voto">5.791 (30,5%)</td></tr>
-                    <tr><td class="td-pos">3º</td><td class="td-nome">NETO MARQUES (PDT)</td><td class="td-voto">1.210 (6,4%)</td></tr>
-                    <tr><td class="td-pos">4º</td><td class="td-nome">-</td><td class="td-voto">-</td></tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">1º</td>
+                        <td class="td-nome">MIGUEL JÚNIOR (MDB) (E)</td>
+                        <td class="td-voto">12.001 (63,2%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">2º</td>
+                        <td class="td-nome">LUCIO BESSA (PT) (NE)</td>
+                        <td class="td-voto">5.791 (30,5%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">3º</td>
+                        <td class="td-nome">NETO MARQUES (PDT) (NE)</td>
+                        <td class="td-voto">1.210 (6,4%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">4º</td>
+                        <td class="td-nome">-</td>
+                        <td class="td-voto">-</td>
+                    </tr>
                 </table>
             </div>
         </div>
@@ -258,51 +364,147 @@
             <div class="box-header"><i class="fas fa-users"></i> VEREADORES 2024 (TOP 15)</div>
             <div class="grid-2-inner">
                 <table>
-                    <tr class="row-highlight"><td class="td-pos">1º</td><td class="td-nome">DANIEL (MDB)</td><td class="td-voto">1.453 (7,6%)</td></tr>
-                    <tr class="row-highlight"><td class="td-pos">2º</td><td class="td-nome">JONAIA CURCINO (MDB)</td><td class="td-voto">913 (4,8%)</td></tr>
-                    <tr class="row-highlight"><td class="td-pos">3º</td><td class="td-nome">TIUI (SOLIDARIEDADE)</td><td class="td-voto">864 (4,5%)</td></tr>
-                    <tr><td class="td-pos">4º</td><td class="td-nome">MATEUS MENEZES (PT)</td><td class="td-voto">792 (4,2%)</td></tr>
-                    <tr><td class="td-pos">5º</td><td class="td-nome">PROFESSOR JEFERSON (PSD)</td><td class="td-voto">704 (3,7%)</td></tr>
-                    <tr><td class="td-pos">6º</td><td class="td-nome">KAEL SILVA (PRD)</td><td class="td-voto">623 (3,3%)</td></tr>
-                    <tr><td class="td-pos">7º</td><td class="td-nome">MARLINHO (PRD)</td><td class="td-voto">551 (2,9%)</td></tr>
-                    <tr><td class="td-pos">8º</td><td class="td-nome">PARACO (PT)</td><td class="td-voto">539 (2,8%)</td></tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">1º</td>
+                        <td class="td-nome">DANIEL (MDB) (E)</td>
+                        <td class="td-voto">1.453 (7,6%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">2º</td>
+                        <td class="td-nome">JONAIA CURCINO (MDB) (E)</td>
+                        <td class="td-voto">913 (4,8%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">3º</td>
+                        <td class="td-nome">TIUI (SOLIDARIEDADE) (E)</td>
+                        <td class="td-voto">864 (4,5%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">4º</td>
+                        <td class="td-nome">MATEUS MENEZES (PT) (E)</td>
+                        <td class="td-voto">792 (4,2%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">5º</td>
+                        <td class="td-nome">PROFESSOR JEFERSON (PSD) (E)</td>
+                        <td class="td-voto">704 (3,7%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">6º</td>
+                        <td class="td-nome">KAEL SILVA (PRD) (E)</td>
+                        <td class="td-voto">623 (3,3%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">7º</td>
+                        <td class="td-nome">MARLINHO (PRD) (E)</td>
+                        <td class="td-voto">551 (2,9%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">8º</td>
+                        <td class="td-nome">PARACO (PT) (E)</td>
+                        <td class="td-voto">539 (2,8%)</td>
+                    </tr>
                 </table>
                 <table>
-                    <tr><td class="td-pos">9º</td><td class="td-nome">JAKSON VERAS (SOLIDARIEDADE)</td><td class="td-voto">517 (2,7%)</td></tr>
-                    <tr><td class="td-pos">10º</td><td class="td-nome">EDIONES SANTOS (PRD)</td><td class="td-voto">508 (2,7%)</td></tr>
-                    <tr><td class="td-pos">11º</td><td class="td-nome">ENOQUE (MDB)</td><td class="td-voto">501 (2,6%)</td></tr>
-                    <tr><td class="td-pos">12º</td><td class="td-nome">BRAZ (MDB)</td><td class="td-voto">477 (2,5%)</td></tr>
-                    <tr><td class="td-pos">13º</td><td class="td-nome">ZICO DE ITABOCAL (MDB)</td><td class="td-voto">445 (2,3%)</td></tr>
-                    <tr><td class="td-pos">14º</td><td class="td-nome">NETO (MDB)</td><td class="td-voto">417 (2,2%)</td></tr>
-                    <tr><td class="td-pos">15º</td><td class="td-nome">HÉLIO (PSD)</td><td class="td-voto">368 (1,9%)</td></tr>
-                    <tr><td colspan="3" style="border: none; background: #f9f9f9; height: 34px;"></td></tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">9º</td>
+                        <td class="td-nome">JAKSON VERAS (SOLIDARIEDADE) (E)</td>
+                        <td class="td-voto">517 (2,7%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">10º</td>
+                        <td class="td-nome">EDIONES SANTOS (PRD) (E)</td>
+                        <td class="td-voto">508 (2,7%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">11º</td>
+                        <td class="td-nome">ENOQUE (MDB) (E)</td>
+                        <td class="td-voto">501 (2,6%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">12º</td>
+                        <td class="td-nome">BRAZ (MDB) (E)</td>
+                        <td class="td-voto">477 (2,5%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">13º</td>
+                        <td class="td-nome">ZICO DE ITABOCAL (MDB) (E)</td>
+                        <td class="td-voto">445 (2,3%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">14º</td>
+                        <td class="td-nome">NETO (MDB) (NE)</td>
+                        <td class="td-voto">417 (2,2%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">15º</td>
+                        <td class="td-nome">HÉLIO (PSD) (NE)</td>
+                        <td class="td-voto">368 (1,9%)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="border: none; background: #f9f9f9; height: 34px;"></td>
+                    </tr>
                 </table>
             </div>
         </div>
 
         <div class="grid-2">
             <div class="box">
-                <div class="box-header"><i class="fas fa-university"></i> FEDERAL (TOP 10 LOCAL)</div>
+                <div class="box-header"><i class="fas fa-university"></i> FEDERAL (TOP ELEITOS LOCAL)</div>
                 <table>
-                    <tr class="row-highlight"><td class="td-pos">1º</td><td class="td-nome">RENILCE NICODEMOS (MDB)</td><td class="td-voto">3.841 (21,3%)</td></tr>
-                    <tr><td class="td-pos">2º</td><td class="td-nome">CELSO SABINO (UNIÃO)</td><td class="td-voto">2.222 (12,3%)</td></tr>
-                    <tr><td class="td-pos">3º</td><td class="td-nome">DRA. ALESSANDRA HABER (MDB)</td><td class="td-voto">1.214 (6,7%)</td></tr>
-                    <tr><td class="td-pos">4º</td><td class="td-nome">ANTONIO DOIDO (MDB)</td><td class="td-voto">1.156 (6,4%)</td></tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">1º</td>
+                        <td class="td-nome">RENILCE NICODEMOS (MDB) (E)</td>
+                        <td class="td-voto">3.841 (21,3%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">2º</td>
+                        <td class="td-nome">CELSO SABINO (UNIÃO) (E)</td>
+                        <td class="td-voto">2.222 (12,3%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">3º</td>
+                        <td class="td-nome">ALESSANDRA HABER (MDB) (E)</td>
+                        <td class="td-voto">1.214 (6,7%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">4º</td>
+                        <td class="td-nome">ANTONIO DOIDO (MDB) (E)</td>
+                        <td class="td-voto">1.156 (6,4%)</td>
+                    </tr>
                 </table>
                 <div class="suplentes-row">
-                    <span class="suplentes-label">* SUPLENTES/OUTROS:</span> LÚCIO VALE 1.012 (5,6%); CÁSSIO ANDRADE 421 (2,3%); HÉLIO LEITE 315 (1,7%); PROF. ADMILSON 289; BETO ANDRADE 242.
+                    <span class="suplentes-label">* NE RELEVANTES:</span> LÚCIO VALE (NE) 1.012 (5,6%); CÁSSIO ANDRADE
+                    (NE) 421 (2,3%); HÉLIO LEITE (NE) 315 (1,7%).
                 </div>
             </div>
             <div class="box">
-                <div class="box-header"><i class="fas fa-flag"></i> ESTADUAL (TOP 10 LOCAL)</div>
+                <div class="box-header"><i class="fas fa-flag"></i> ESTADUAL (TOP ELEITOS LOCAL)</div>
                 <table>
-                    <tr class="row-highlight"><td class="td-pos">1º</td><td class="td-nome">CILENE COUTO (PSDB)</td><td class="td-voto">3.512 (19,5%)</td></tr>
-                    <tr><td class="td-pos">2º</td><td class="td-nome">RONIE SILVA (MDB)</td><td class="td-voto">2.145 (11,9%)</td></tr>
-                    <tr><td class="td-pos">3º</td><td class="td-nome">PAULA TITAN (MDB)</td><td class="td-voto">1.543 (8,5%)</td></tr>
-                    <tr><td class="td-pos">4º</td><td class="td-nome">IRAN LIMA (MDB)</td><td class="td-voto">1.102 (6,1%)</td></tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">1º</td>
+                        <td class="td-nome">CILENE COUTO (PSDB) (E)</td>
+                        <td class="td-voto">3.512 (19,5%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">2º</td>
+                        <td class="td-nome">RONIE SILVA (MDB) (E)</td>
+                        <td class="td-voto">2.145 (11,9%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">3º</td>
+                        <td class="td-nome">PAULA TITAN (MDB) (E)</td>
+                        <td class="td-voto">1.543 (8,5%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">4º</td>
+                        <td class="td-nome">IRAN LIMA (MDB) (E)</td>
+                        <td class="td-voto">1.102 (6,1%)</td>
+                    </tr>
                 </table>
                 <div class="suplentes-row">
-                    <span class="suplentes-label">* SUPLENTES/OUTROS:</span> RENATO OGAWA 892 (4,9%); MIRO SANOVA 521 (2,9%); VITOR DIAS 412; DR. WANDERLAN 345; DEL. NILTON NEVES 298.
+                    <span class="suplentes-label">* NE RELEVANTES:</span> RENATO OGAWA (NE) 892 (4,9%); MIRO SANOVA (NE)
+                    521 (2,9%); VITOR DIAS (NE) 412.
                 </div>
             </div>
         </div>
@@ -312,12 +514,17 @@
                 <h3><i class="fas fa-chart-line"></i> CELSO SABINO NO MUNICÍPIO</h3>
                 <div class="cs-data">
                     2018: <strong>1.845 (11,42%)</strong> | 2022: <strong>2.222 (12,35%)</strong><br>
-                    Crescimento: <span class="cs-growth">+377 VOTOS (20,43%)</span> | Total: <strong>4.067 Votos</strong>
+                    Crescimento: <span class="cs-growth">+377 VOTOS (20,43%)</span> | Total: <strong>4.067
+                        Votos</strong>
                 </div>
             </div>
             <div class="chart">
-                <div class="bar-group"><div class="bar old" style="height: 48px;"></div><span>2018</span></div>
-                <div class="bar-group"><div class="bar new" style="height: 60px;"></div><span>2022</span></div>
+                <div class="bar-group">
+                    <div class="bar old" style="height: 48px;"></div><span>2018</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar new" style="height: 60px;"></div><span>2022</span>
+                </div>
             </div>
         </div>
 

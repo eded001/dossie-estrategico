@@ -127,23 +127,6 @@
             height: 32px;
         }
 
-        /* SUPLENTES */
-        .suplentes-row {
-            background-color: #f4f6f8;
-            border-top: 1px solid #ddd;
-            padding: 5px 10px;
-            font-size: 8.5pt;
-            color: #333;
-            line-height: 1.3;
-        }
-
-        .suplentes-label {
-            color: var(--cs-blue);
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-right: 5px;
-        }
-
         /* GRIDS E TABELAS */
         .grid-2 {
             display: grid;
@@ -155,18 +138,19 @@
         .grid-2-inner {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            gap: 10px;
             padding: 0;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 10pt;
+            font-size: 9pt;
+            /* Reduzido levemente para ganhar espaço */
         }
 
         td {
-            padding: 5px 8px;
+            padding: 5px 6px;
             border-bottom: 1px solid #ddd;
             color: #222;
             vertical-align: middle;
@@ -183,22 +167,24 @@
         }
 
         .td-pos {
-            width: 35px;
+            width: 25px;
             text-align: center;
             font-weight: bold;
             color: #555;
-            font-size: 9pt;
+            font-size: 8pt;
             background: #f9f9f9;
             border-right: 1px solid #eee;
         }
 
         .td-nome {
-            font-weight: 600;
-            padding-left: 10px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 180px;
+            font-weight: 700;
+            padding-left: 8px;
+            /* REMOVIDO: white-space: nowrap e overflow: hidden */
+            max-width: none;
+            /* Permitir que use o espaço total da célula */
+            text-transform: uppercase;
+            line-height: 1;
+            font-size: 8.5pt;
         }
 
         .td-voto {
@@ -206,7 +192,26 @@
             font-weight: 900;
             color: var(--cs-blue);
             font-family: monospace;
-            font-size: 11pt;
+            font-size: 10pt;
+            white-space: nowrap;
+            /* Mantém números na mesma linha */
+        }
+
+        /* SUPLENTES */
+        .suplentes-row {
+            background-color: #f4f6f8;
+            border-top: 1px solid #ddd;
+            padding: 5px 10px;
+            font-size: 8.5pt;
+            color: #333;
+            line-height: 1.3;
+        }
+
+        .suplentes-label {
+            color: var(--cs-blue);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-right: 5px;
         }
 
         /* RODAPÉ CELSO SABINO */
@@ -305,12 +310,12 @@
             <table>
                 <tr class="row-highlight">
                     <td class="td-pos">1º</td>
-                    <td class="td-nome">LULA (PT)</td>
+                    <td class="td-nome">LULA (PT) (E)</td>
                     <td class="td-voto">10.742 (74,40%)</td>
                 </tr>
                 <tr>
                     <td class="td-pos">2º</td>
-                    <td class="td-nome">BOLSONARO (PL)</td>
+                    <td class="td-nome">BOLSONARO (PL) (N/E)</td>
                     <td class="td-voto">3.696 (25,60%)</td>
                 </tr>
             </table>
@@ -322,22 +327,22 @@
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
-                        <td class="td-nome">HELDER (MDB)</td>
+                        <td class="td-nome">HELDER (MDB) (E)</td>
                         <td class="td-voto">11.072 (87,66%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">ZEQUINHA MARINHO (PL)</td>
+                        <td class="td-nome">ZEQUINHA MARINHO (PL) (N/E)</td>
                         <td class="td-voto">1.366 (10,81%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">3º</td>
-                        <td class="td-nome">ADOLFO OLIVEIRA (PSOL)</td>
+                        <td class="td-nome">ADOLFO OLIVEIRA (PSOL) (N/E)</td>
                         <td class="td-voto">161 (1,27%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">4º</td>
-                        <td class="td-nome">DR. FELIPE (PRTB)</td>
+                        <td class="td-nome">DR. FELIPE (PRTB) (N/E)</td>
                         <td class="td-voto">12 (0,10%)</td>
                     </tr>
                 </table>
@@ -347,12 +352,12 @@
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
-                        <td class="td-nome">ADAMOR AIRES (MDB)</td>
+                        <td class="td-nome">ADAMOR AIRES (MDB) (E)</td>
                         <td class="td-voto">8.829 (58,62%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">BODE (UNIÃO)</td>
+                        <td class="td-nome">BODE (UNIÃO) (N/E)</td>
                         <td class="td-voto">6.233 (41,38%)</td>
                     </tr>
                 </table>
@@ -360,84 +365,84 @@
         </div>
 
         <div class="box">
-            <div class="box-header"><i class="fas fa-users"></i> VEREADORES 2024 (TOP 15)</div>
+            <div class="box-header"><i class="fas fa-users"></i> VEREADORES 2024 (TOP 11 ELEITOS + SUPLENTES)</div>
             <div class="grid-2-inner">
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
-                        <td class="td-nome">AHRNON OLIVEIRA (MDB)</td>
+                        <td class="td-nome">AHRNON OLIVEIRA (MDB) (E)</td>
                         <td class="td-voto">1.479 (9,82%)</td>
                     </tr>
                     <tr class="row-highlight">
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">MARINHO DO BROCA (PSB)</td>
+                        <td class="td-nome">MARINHO DO BROCA (PSB) (E)</td>
                         <td class="td-voto">829 (5,50%)</td>
                     </tr>
                     <tr class="row-highlight">
                         <td class="td-pos">3º</td>
-                        <td class="td-nome">ZECA DO BENTO (PSB)</td>
+                        <td class="td-nome">ZECA DO BENTO (PSB) (E)</td>
                         <td class="td-voto">742 (4,93%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">4º</td>
-                        <td class="td-nome">BASTIÃO DO PAU (MDB)</td>
+                        <td class="td-nome">BASTIÃO DO PAU (MDB) (E)</td>
                         <td class="td-voto">724 (4,81%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">5º</td>
-                        <td class="td-nome">NEGUINHO COCO (MDB)</td>
+                        <td class="td-nome">NEGUINHO COCO (MDB) (E)</td>
                         <td class="td-voto">704 (4,67%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">6º</td>
-                        <td class="td-nome">SAMUEL CORUJINHA (MDB)</td>
+                        <td class="td-nome">SAMUEL CORUJINHA (MDB) (E)</td>
                         <td class="td-voto">659 (4,38%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">7º</td>
-                        <td class="td-nome">TASSO LIMA (UNIÃO)</td>
+                        <td class="td-nome">TASSO LIMA (UNIÃO) (E)</td>
                         <td class="td-voto">642 (4,26%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">8º</td>
-                        <td class="td-nome">NALVINHA SAUDE (PSB)</td>
+                        <td class="td-nome">NALVINHA SAUDE (PSB) (E)</td>
                         <td class="td-voto">630 (4,18%)</td>
                     </tr>
                 </table>
                 <table>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">9º</td>
-                        <td class="td-nome">SÁVIO DO CECÉU (PSB)</td>
+                        <td class="td-nome">SÁVIO DO CECÉU (PSB) (E)</td>
                         <td class="td-voto">616 (4,09%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">10º</td>
-                        <td class="td-nome">NALDINHO (UNIÃO)</td>
+                        <td class="td-nome">NALDINHO (UNIÃO) (E)</td>
                         <td class="td-voto">545 (3,62%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">11º</td>
-                        <td class="td-nome">MÁRIO SÉRGIO (PSB)</td>
+                        <td class="td-nome">MÁRIO SÉRGIO (PSB) (E)</td>
                         <td class="td-voto">536 (3,56%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">12º</td>
-                        <td class="td-nome">NEGO DO BENTO (MDB)</td>
+                        <td class="td-nome">NEGO DO BENTO (MDB) (N/E)</td>
                         <td class="td-voto">511 (3,39%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">13º</td>
-                        <td class="td-nome">JOSÉ MARIA (MDB)</td>
+                        <td class="td-nome">JOSÉ MARIA (MDB) (N/E)</td>
                         <td class="td-voto">483 (3,21%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">14º</td>
-                        <td class="td-nome">IVALMIR (PT)</td>
+                        <td class="td-nome">IVALMIR (PT) (N/E)</td>
                         <td class="td-voto">425 (2,82%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">15º</td>
-                        <td class="td-nome">FRANCILENE POSTO (PSD)</td>
+                        <td class="td-nome">FRANCILENE POSTO (PSD) (N/E)</td>
                         <td class="td-voto">358 (2,38%)</td>
                     </tr>
                     <tr>
@@ -453,59 +458,59 @@
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
-                        <td class="td-nome">DILVANDA FARO (PT)</td>
+                        <td class="td-nome">DILVANDA FARO (PT) (E)</td>
                         <td class="td-voto">1.198 (8,93%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">ANDREIA SIQUEIRA (MDB)</td>
+                        <td class="td-nome">ANDREIA SIQUEIRA (MDB) (E)</td>
                         <td class="td-voto">619 (4,61%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">3º</td>
-                        <td class="td-nome">RENILCE NICODEMOS (MDB)</td>
+                        <td class="td-nome">RENILCE NICODEMOS (MDB) (E)</td>
                         <td class="td-voto">404 (3,01%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">4º</td>
-                        <td class="td-nome">EDUARDO COSTA (PSD)</td>
+                        <td class="td-nome">EDUARDO COSTA (PSD) (N/E)</td>
                         <td class="td-voto">283 (2,11%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">5º</td>
-                        <td class="td-nome">CELSO SABINO (UNIÃO)</td>
+                        <td class="td-nome">CELSO SABINO (UNIÃO) (E)</td>
                         <td class="td-voto">260 (1,94%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">6º</td>
-                        <td class="td-nome">OLIVAL MARQUES (MDB)</td>
+                        <td class="td-nome">OLIVAL MARQUES (MDB) (E)</td>
                         <td class="td-voto">204 (1,52%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">7º</td>
-                        <td class="td-nome">PRIANTE (MDB)</td>
+                        <td class="td-nome">PRIANTE (MDB) (E)</td>
                         <td class="td-voto">196 (1,46%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">8º</td>
-                        <td class="td-nome">JUNIOR FERRARI (PSD)</td>
+                        <td class="td-nome">JUNIOR FERRARI (PSD) (E)</td>
                         <td class="td-voto">184 (1,37%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">9º</td>
-                        <td class="td-nome">ANTONIO DOIDO (MDB)</td>
+                        <td class="td-nome">ANTONIO DOIDO (MDB) (E)</td>
                         <td class="td-voto">172 (1,28%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">10º</td>
-                        <td class="td-nome">ELCIONE (MDB)</td>
+                        <td class="td-nome">ELCIONE (MDB) (E)</td>
                         <td class="td-voto">165 (1,23%)</td>
                     </tr>
                 </table>
                 <div class="suplentes-row">
                     <span class="suplentes-label">* SUPLENTES:</span>
-                    CÁSSIO ANDRADE (PSB) 4.965 (37,01%) ; CRISTIANO VALE (PP) 2.116 (15,77%) ; PAULO BENGTSON (PTB) 464
-                    (3,46%) ; ANA JÚLIA (PT) 219 (1,63%) ; LÚCIO VALE (PP) 112 (0,83%)
+                    CÁSSIO ANDRADE (PSB) (N/E); CRISTIANO VALE (PP) (N/E); PAULO BENGTSON (PTB) (N/E); ANA JÚLIA (PT)
+                    (N/E); LÚCIO VALE (PP) (N/E)
                 </div>
             </div>
 
@@ -514,59 +519,59 @@
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
-                        <td class="td-nome">CILENE COUTO (PSDB)</td>
+                        <td class="td-nome">CILENE COUTO (PSDB) (E)</td>
                         <td class="td-voto">4.188 (31,31%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">DIANA BELO (MDB)</td>
+                        <td class="td-nome">DIANA BELO (MDB) (E)</td>
                         <td class="td-voto">1.565 (11,70%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">3º</td>
-                        <td class="td-nome">NILTON NEVES (PSD)</td>
+                        <td class="td-nome">NILTON NEVES (PSD) (E)</td>
                         <td class="td-voto">1.109 (8,29%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">4º</td>
-                        <td class="td-nome">BORDALO (PT)</td>
+                        <td class="td-nome">BORDALO (PT) (E)</td>
                         <td class="td-voto">1.096 (8,19%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">5º</td>
-                        <td class="td-nome">PAULA GOMES (MDB)</td>
+                        <td class="td-nome">PAULA GOMES (MDB) (E)</td>
                         <td class="td-voto">724 (5,41%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">6º</td>
-                        <td class="td-nome">ANTONIO TONHEIRO (PP)</td>
+                        <td class="td-nome">ANTONIO TONHEIRO (PP) (E)</td>
                         <td class="td-voto">566 (4,23%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">7º</td>
-                        <td class="td-nome">DR. WANDERLAN (MDB)</td>
+                        <td class="td-nome">DR. WANDERLAN (MDB) (E)</td>
                         <td class="td-voto">547 (4,09%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">8º</td>
-                        <td class="td-nome">RONIE SILVA (MDB)</td>
+                        <td class="td-nome">RONIE SILVA (MDB) (E)</td>
                         <td class="td-voto">184 (1,38%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">9º</td>
-                        <td class="td-nome">MARTINHO CARMONA (MDB)</td>
+                        <td class="td-nome">MARTINHO CARMONA (MDB) (E)</td>
                         <td class="td-voto">132 (0,99%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">10º</td>
-                        <td class="td-nome">ELIAS SANTIAGO (PT)</td>
+                        <td class="td-nome">ELIAS SANTIAGO (PT) (E)</td>
                         <td class="td-voto">98 (0,73%)</td>
                     </tr>
                 </table>
                 <div class="suplentes-row">
                     <span class="suplentes-label">* SUPLENTES:</span>
-                    PROFESSORA NILSE (PDT) 122 (0,91%) ; DRA. HELOISA (PSOL) 84 (0,63%) ; PASTORA RAY (MDB) 76 (0,57%) ;
-                    BETO ANDRADE (PSB) 68 (0,51%) ; DELEGADO CAVEIRA (PL) 52 (0,39%)
+                    PROFESSORA NILSE (PDT) (N/E); DRA. HELOISA (PSOL) (N/E); PASTORA RAY (MDB) (N/E); BETO ANDRADE (PSB)
+                    (N/E); DELEGADO CAVEIRA (PL) (E)
                 </div>
             </div>
         </div>
