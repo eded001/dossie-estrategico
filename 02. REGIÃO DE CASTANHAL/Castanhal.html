@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* CONFIGURAÇÃO DE IMPRESSÃO */
+        /* CONFIGURAÇÃO DE IMPRESSÃO - DO TEMPLATE */
         @page {
             size: A4;
             margin: 0;
@@ -41,6 +41,7 @@
             justify-content: space-between;
         }
 
+        /* CORES */
         :root {
             --cs-blue: #002266;
             --cs-amber: #ffcc00;
@@ -56,7 +57,6 @@
             border-bottom: 5px solid var(--cs-amber);
             padding-bottom: 8px;
             height: 70px;
-            margin-bottom: 10px;
         }
 
         .logo-box {
@@ -70,6 +70,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .city-info {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
         }
 
         .city-name {
@@ -89,24 +97,26 @@
             font-size: 11pt;
             border-radius: 4px;
             margin-top: 5px;
-            display: inline-block;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* BOXES E TABELAS */
+        /* BOXES */
         .box {
             border: 1px solid #bbb;
             border-radius: 5px;
             overflow: hidden;
             background: white;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            margin-bottom: 10px;
         }
 
         .box-header {
             background: var(--cs-blue);
             color: white;
-            font-size: 10.5pt;
+            font-size: 11pt;
             font-weight: 900;
             text-transform: uppercase;
             padding: 6px 12px;
@@ -117,75 +127,14 @@
             height: 32px;
         }
 
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-
-        .grid-2-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-        }
-
-        .grid-2-inner table:first-child {
-            border-right: 1px solid #ddd;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            table-layout: fixed;
-        }
-
-        td {
-            padding: 4px 8px;
-            border-bottom: 1px solid #eee;
-            vertical-align: middle;
-            height: 34px;
-        }
-
-        .td-pos {
-            width: 30px;
-            text-align: center;
-            font-weight: bold;
-            color: #777;
-            font-size: 8.5pt;
-            background: #fcfcfc;
-        }
-
-        .td-nome {
-            font-weight: 600;
-            font-size: 8.5pt;
-            line-height: 1.1;
-            padding-left: 10px;
-            white-space: normal;
-            word-wrap: break-word;
-            color: #222;
-        }
-
-        .td-voto {
-            width: 105px;
-            text-align: right;
-            font-weight: 900;
-            color: var(--cs-blue);
-            font-family: monospace;
-            font-size: 9.5pt;
-        }
-
-        .row-highlight {
-            background: var(--cs-green-bg) !important;
-        }
-
-        /* SUPLENTES E DADOS */
+        /* SUPLENTES */
         .suplentes-row {
             background-color: #f4f6f8;
             border-top: 1px solid #ddd;
-            padding: 6px 10px;
-            font-size: 8pt;
+            padding: 5px 10px;
+            font-size: 8.5pt;
             color: #333;
-            line-height: 1.2;
+            line-height: 1.3;
         }
 
         .suplentes-label {
@@ -195,44 +144,106 @@
             margin-right: 5px;
         }
 
-        /* RODAPÉ AJUSTADO */
+        /* GRIDS E TABELAS */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .grid-2-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10pt;
+        }
+
+        td {
+            padding: 5px 8px;
+            border-bottom: 1px solid #ddd;
+            color: #222;
+            vertical-align: middle;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .row-highlight {
+            background: var(--cs-green-bg) !important;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .td-pos {
+            width: 35px;
+            text-align: center;
+            font-weight: bold;
+            color: #555;
+            font-size: 9pt;
+            background: #f9f9f9;
+            border-right: 1px solid #eee;
+        }
+
+        .td-nome {
+            font-weight: 600;
+            padding-left: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 180px;
+        }
+
+        .td-voto {
+            text-align: right;
+            font-weight: 900;
+            color: var(--cs-blue);
+            font-family: monospace;
+            font-size: 11pt;
+        }
+
+        /* RODAPÉ CELSO SABINO */
         .cs-area {
             border: 3px solid var(--cs-amber);
             background: linear-gradient(to right, #fff, #fffbf0);
-            padding: 10px 15px;
+            padding: 12px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             border-radius: 8px;
             height: 95px;
-            overflow: hidden;
-        }
-
-        .cs-info {
-            flex: 1;
+            margin-top: 5px;
         }
 
         .cs-info h3 {
-            margin: 0 0 2px 0;
+            margin: 0 0 5px 0;
             color: var(--cs-blue);
             font-size: 13pt;
-            font-weight: 900;
             text-transform: uppercase;
+            font-weight: 900;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .cs-data {
-            font-size: 9.5pt;
-            line-height: 1.2;
+            font-size: 10.5pt;
+            line-height: 1.4;
             color: #333;
         }
 
         .cs-growth {
-            color: #cc0000;
+            color: #00802b;
             font-weight: 900;
-            background: #ffe6e6;
+            font-size: 12pt;
+            background: #e6f7e9;
             padding: 0 4px;
             border-radius: 3px;
         }
@@ -240,30 +251,28 @@
         .chart {
             display: flex;
             align-items: flex-end;
-            gap: 12px;
-            height: 65px;
-            flex-shrink: 0;
-            padding-left: 10px;
+            gap: 20px;
+            height: 55px;
+            padding-bottom: 5px;
         }
 
         .bar-group {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 7.5pt;
+            text-align: center;
+            font-size: 8pt;
             font-weight: bold;
-            color: #555;
-            gap: 4px;
+            color: #444;
         }
 
         .bar {
-            width: 28px;
+            width: 35px;
             background: var(--cs-blue);
-            border-radius: 3px 3px 0 0;
+            border: 1px solid #001a4d;
+            border-radius: 4px 4px 0 0;
         }
 
         .bar.old {
             background: #999;
+            border-color: #666;
         }
 
         @media print {
@@ -296,13 +305,13 @@
             <table>
                 <tr class="row-highlight">
                     <td class="td-pos">1º</td>
-                    <td class="td-nome" style="font-size: 11pt;">JAIR BOLSONARO (PL) (NE)</td>
-                    <td class="td-voto" style="font-size: 12pt; width: 220px;">58.469 (52,25%)</td>
+                    <td class="td-nome">JAIR BOLSONARO (PL) (NE)</td>
+                    <td class="td-voto">58.469 (52,25%)</td>
                 </tr>
                 <tr>
                     <td class="td-pos">2º</td>
-                    <td class="td-nome" style="font-size: 11pt;">LULA (PT) (E)</td>
-                    <td class="td-voto" style="font-size: 12pt; width: 220px;">53.437 (47,75%)</td>
+                    <td class="td-nome">LULA (PT) (E)</td>
+                    <td class="td-voto">53.437 (47,75%)</td>
                 </tr>
             </table>
         </div>
@@ -442,7 +451,7 @@
                         <td class="td-voto">1.554 (1,3%)</td>
                     </tr>
                     <tr>
-                        <td colspan="3" style="border: none; background: #f9f9f9; height: 34px;"></td>
+                        <td colspan="3" style="height: 33px; border:none;"></td>
                     </tr>
                 </table>
             </div>
@@ -467,11 +476,25 @@
                         <td class="td-nome">CELSO SABINO (UNIÃO) (E)</td>
                         <td class="td-voto">2.059 (1,9%)</td>
                     </tr>
+                    <tr>
+                        <td colspan="3" style="height: 33px; border:none;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="height: 33px; border:none;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="height: 33px; border:none;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="height: 33px; border:none;"></td>
+                    </tr>
                 </table>
-                <div class="suplentes-row"><span class="suplentes-label">* RELEVANTES:</span> MARCIO MIRANDA (NE)
-                    17.060;
-                    EDUARDO COSTA (NE) 7.807; PAULO BENGTSON (NE) 2.659.</div>
+                <div class="suplentes-row">
+                    <span class="suplentes-label">* RELEVANTES:</span>
+                    MARCIO MIRANDA (NE) 17.060; EDUARDO COSTA (NE) 7.807; PAULO BENGTSON (NE) 2.659.
+                </div>
             </div>
+
             <div class="box">
                 <div class="box-header"><i class="fas fa-flag"></i> ESTADUAL (VOTAÇÃO LOCAL)</div>
                 <table>
@@ -490,10 +513,23 @@
                         <td class="td-nome">THIAGO ARAUJO (CIDADANIA) (E)</td>
                         <td class="td-voto">675 (0,6%)</td>
                     </tr>
+                    <tr>
+                        <td colspan="3" style="height: 33px; border:none;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="height: 33px; border:none;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="height: 33px; border:none;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="height: 33px; border:none;"></td>
+                    </tr>
                 </table>
-                <div class="suplentes-row"><span class="suplentes-label">* RELEVANTES:</span> PAULO HENRIQUE (NE)
-                    12.350;
-                    RAFAEL GALVÃO (NE) 5.643.</div>
+                <div class="suplentes-row">
+                    <span class="suplentes-label">* RELEVANTES:</span>
+                    PAULO HENRIQUE (NE) 12.350; RAFAEL GALVÃO (NE) 5.643.
+                </div>
             </div>
         </div>
 
@@ -502,17 +538,16 @@
                 <h3><i class="fas fa-chart-line"></i> CELSO SABINO NO MUNICÍPIO</h3>
                 <div class="cs-data">
                     2018: <strong>3.832 (4,20%)</strong> | 2022: <strong>2.059 (1,91%)</strong><br>
-                    Crescimento: <span class="cs-growth">-46,27%</span> | Total: <strong>5.891 Votos</strong>
+                    Crescimento: <span class="cs-growth" style="color: #cc0000; background: #ffe6e6;">-46,27%</span><br>
+                    Total Acumulado: <strong>5.891 Votos</strong>
                 </div>
             </div>
             <div class="chart">
                 <div class="bar-group">
-                    <div class="bar old" style="height: 55px;"></div>
-                    <span>2018</span>
+                    <div class="bar old" style="height: 55px;"></div>2018
                 </div>
                 <div class="bar-group">
-                    <div class="bar new" style="height: 29px;"></div>
-                    <span>2022</span>
+                    <div class="bar new" style="height: 29px;"></div>2022
                 </div>
             </div>
         </div>

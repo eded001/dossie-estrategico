@@ -2,14 +2,15 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dossiê DOM ELISEU - PA</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700;900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        /* CONFIGURAÇÃO DE IMPRESSÃO - ALINHADO AO TEMPLATE */
         @page {
             size: A4;
             margin: 0;
@@ -25,7 +26,7 @@
             margin: 0;
             padding: 0;
             background: #555;
-            font-family: "Roboto Condensed", sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;
         }
 
         .page {
@@ -40,6 +41,7 @@
             justify-content: space-between;
         }
 
+        /* CORES PADRÃO TEMPLATE */
         :root {
             --cs-blue: #002266;
             --cs-amber: #ffcc00;
@@ -47,6 +49,7 @@
             --cs-green-bg: #e6f7e9;
         }
 
+        /* CABEÇALHO PADRÃO TEMPLATE */
         .header {
             display: flex;
             justify-content: space-between;
@@ -98,6 +101,7 @@
             letter-spacing: 0.5px;
         }
 
+        /* BOXES */
         .box {
             border: 1px solid #bbb;
             border-radius: 5px;
@@ -123,6 +127,7 @@
             height: 32px;
         }
 
+        /* SUPLENTES / NOTAS */
         .suplentes-row {
             background-color: #f4f6f8;
             border-top: 1px solid #ddd;
@@ -139,6 +144,7 @@
             margin-right: 5px;
         }
 
+        /* GRIDS E TABELAS */
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -177,7 +183,7 @@
         }
 
         .td-pos {
-            width: 30px;
+            width: 35px;
             text-align: center;
             font-weight: bold;
             color: #555;
@@ -189,7 +195,10 @@
         .td-nome {
             font-weight: 600;
             padding-left: 10px;
-            line-height: 1.1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 180px;
         }
 
         .td-voto {
@@ -197,10 +206,10 @@
             font-weight: 900;
             color: var(--cs-blue);
             font-family: monospace;
-            font-size: 10pt;
-            white-space: nowrap;
+            font-size: 11pt;
         }
 
+        /* RODAPÉ CELSO SABINO */
         .cs-area {
             border: 3px solid var(--cs-amber);
             background: linear-gradient(to right, #fff, #fffbf0);
@@ -281,12 +290,13 @@
 </head>
 
 <body>
+
     <div class="page">
         <div class="header">
             <div class="logo-box">CS</div>
             <div class="city-info">
                 <h1 class="city-name">DOM ELISEU - PA</h1>
-                <div class="city-meta">ELEITORES: 30.344</div>
+                <div class="city-meta">ELEITORES: 30.344 | FONTE: TSE</div>
             </div>
         </div>
 
@@ -337,7 +347,7 @@
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
-                        <td class="td-nome">SILON (UNIÃO)</td>
+                        <td class="td-nome">SILON (UNIÃO) (E)</td>
                         <td class="td-voto">15.351 (63,11%)</td>
                     </tr>
                     <tr>
@@ -365,80 +375,83 @@
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
-                        <td class="td-nome">PAULO CESAR (MDB) (E)</td>
-                        <td class="td-voto">828 (3,35%)</td>
+                        <td class="td-nome">PAULO CESAR (MDB)</td>
+                        <td class="td-voto">828</td>
                     </tr>
                     <tr class="row-highlight">
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">RAPHAEL (PSDB) (E)</td>
-                        <td class="td-voto">821 (3,32%)</td>
+                        <td class="td-nome">RAPHAEL (PSDB)</td>
+                        <td class="td-voto">821</td>
                     </tr>
                     <tr class="row-highlight">
                         <td class="td-pos">3º</td>
-                        <td class="td-nome">NEGUINHO (UNIÃO) (E)</td>
-                        <td class="td-voto">745 (3,01%)</td>
+                        <td class="td-nome">NEGUINHO (UNIÃO)</td>
+                        <td class="td-voto">745</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">4º</td>
-                        <td class="td-nome">ROBSON OLIVEIRA (UNIÃO) (E)</td>
-                        <td class="td-voto">672 (2,72%)</td>
+                        <td class="td-nome">ROBSON OLIVEIRA (UNIÃO)</td>
+                        <td class="td-voto">672</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">5º</td>
-                        <td class="td-nome">CLENES RIBEIRO (PSDB) (E)</td>
-                        <td class="td-voto">652 (2,63%)</td>
+                        <td class="td-nome">CLENES RIBEIRO (PSDB)</td>
+                        <td class="td-voto">652</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">6º</td>
-                        <td class="td-nome">CLAUDIA (UNIÃO) (E)</td>
-                        <td class="td-voto">649 (2,62%)</td>
+                        <td class="td-nome">CLAUDIA (UNIÃO)</td>
+                        <td class="td-voto">649</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">7º</td>
-                        <td class="td-nome">ELKMAR (PODE) (E)</td>
-                        <td class="td-voto">639 (2,58%)</td>
+                        <td class="td-nome">ELKMAR (PODE)</td>
+                        <td class="td-voto">639</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">8º</td>
-                        <td class="td-nome">CABEÇA BRANCA (PSDB) (E)</td>
-                        <td class="td-voto">612 (2,47%)</td>
+                        <td class="td-nome">CABEÇA BRANCA (PSDB)</td>
+                        <td class="td-voto">612</td>
                     </tr>
                 </table>
                 <table>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">9º</td>
-                        <td class="td-nome">THALLES (UNIÃO) (E)</td>
-                        <td class="td-voto">611 (2,47%)</td>
+                        <td class="td-nome">THALLES (UNIÃO)</td>
+                        <td class="td-voto">611</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">10º</td>
-                        <td class="td-nome">EDILSON JUNIOR (PSD) (E)</td>
-                        <td class="td-voto">595 (2,40%)</td>
+                        <td class="td-nome">EDILSON JUNIOR (PSD)</td>
+                        <td class="td-voto">595</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">11º</td>
-                        <td class="td-nome">GIVANILDO (PDT) (E)</td>
-                        <td class="td-voto">592 (2,39%)</td>
+                        <td class="td-nome">GIVANILDO (PDT)</td>
+                        <td class="td-voto">592</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">12º</td>
-                        <td class="td-nome">DR. HAGTON (REP) (E)</td>
-                        <td class="td-voto">589 (2,38%)</td>
+                        <td class="td-nome">DR. HAGTON (REP)</td>
+                        <td class="td-voto">589</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">13º</td>
-                        <td class="td-nome">LUIS LIMA (PL) (E)</td>
-                        <td class="td-voto">545 (2,20%)</td>
+                        <td class="td-nome">LUIS LIMA (PL)</td>
+                        <td class="td-voto">545</td>
                     </tr>
                     <tr>
                         <td class="td-pos">14º</td>
-                        <td class="td-nome">EDMILSON JUNIOR (MDB) (N/E)</td>
-                        <td class="td-voto">525 (2,12%)</td>
+                        <td class="td-nome">EDMILSON JUNIOR (MDB)</td>
+                        <td class="td-voto">525</td>
                     </tr>
                     <tr>
                         <td class="td-pos">15º</td>
-                        <td class="td-nome">KARTTY JONNES (PP) (N/E)</td>
-                        <td class="td-voto">506 (2,04%)</td>
+                        <td class="td-nome">KARTTY JONNES (PP)</td>
+                        <td class="td-voto">506</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="height: 33px; border:none;"></td>
                     </tr>
                 </table>
             </div>
@@ -446,7 +459,7 @@
 
         <div class="grid-2">
             <div class="box">
-                <div class="box-header"><i class="fas fa-university"></i> FEDERAL (TOP 10 LOCAL)</div>
+                <div class="box-header"><i class="fas fa-university"></i> FEDERAL (RANKING CORRIGIDO 2022)</div>
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
@@ -460,74 +473,81 @@
                     </tr>
                     <tr>
                         <td class="td-pos">3º</td>
+                        <td class="td-nome">MARCIO MIRANDA (PTB)</td>
+                        <td class="td-voto">1.390 (6,30%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">4º</td>
                         <td class="td-nome">ELCIONE (MDB)</td>
                         <td class="td-voto">1.112 (5,04%)</td>
                     </tr>
                     <tr>
-                        <td class="td-pos">4º</td>
+                        <td class="td-pos">5º</td>
                         <td class="td-nome">PRIANTE (MDB)</td>
                         <td class="td-voto">1.090 (4,94%)</td>
                     </tr>
-                    <tr>
-                        <td class="td-pos">5º</td>
-                        <td class="td-nome">DILVANDA FARO (PT)</td>
-                        <td class="td-voto">949 (4,30%)</td>
-                    </tr>
                 </table>
-                <div class="suplentes-row"><span class="suplentes-label">* SUPLENTES:</span> MARCIO MIRANDA (PTB) 1.390
-                    (6,30%)</div>
+                <div class="suplentes-row">
+                    <span class="suplentes-label">* NOTA:</span> Marcio Miranda inserido conforme votação local.
+                </div>
             </div>
+
             <div class="box">
-                <div class="box-header"><i class="fas fa-flag"></i> ESTADUAL (TOP 10 LOCAL)</div>
+                <div class="box-header"><i class="fas fa-flag"></i> ESTADUAL (TOP LOCAL 2022)</div>
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
                         <td class="td-nome">CILENE COUTO (PSDB)</td>
                         <td class="td-voto">2.698 (12,20%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">2º</td>
                         <td class="td-nome">BRAZ (PDT)</td>
                         <td class="td-voto">2.544 (11,50%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">3º</td>
                         <td class="td-nome">ROGERIO BARRA (PL)</td>
                         <td class="td-voto">1.329 (6,01%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">4º</td>
                         <td class="td-nome">DIRCEU TEN CATEN (PT)</td>
                         <td class="td-voto">1.099 (4,97%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">5º</td>
                         <td class="td-nome">CHAMONZINHO (MDB)</td>
                         <td class="td-voto">613 (2,77%)</td>
                     </tr>
                 </table>
-                <div class="suplentes-row"><span class="suplentes-label">* SUPLENTES:</span> JOAQUIM NOGUEIRA (MDB)
-                    4.854 (21,95%)</div>
+                <div class="suplentes-row">
+                    <span class="suplentes-label">* NOTA:</span> Ranking validado conforme TSE.
+                </div>
             </div>
         </div>
 
         <div class="cs-area">
             <div class="cs-info">
                 <h3><i class="fas fa-chart-line"></i> CELSO SABINO NESTE MUNICÍPIO</h3>
-                <div class="cs-data">2018: <strong>2.214 (11,46%)</strong> | 2022: <strong>4.369
-                        (19,82%)</strong><br />Crescimento: <span class="cs-growth">+97,33%</span><br />Total Acumulado:
-                    <strong>6.583 Votos</strong></div>
+                <div class="cs-data">
+                    2018: <strong>2.214 (11,46%)</strong> | 2022: <strong>4.369 (19,82%)</strong><br>
+                    Crescimento: <span class="cs-growth">+97,33%</span><br>
+                    Total Acumulado: <strong>6.583 Votos</strong>
+                </div>
             </div>
             <div class="chart">
                 <div class="bar-group">
-                    <div class="bar old" style="height: 25px"></div>2018
+                    <div class="bar old" style="height: 30px;"></div>2018
                 </div>
                 <div class="bar-group">
-                    <div class="bar new" style="height: 50px"></div>2022
+                    <div class="bar new" style="height: 60px;"></div>2022
                 </div>
             </div>
         </div>
+
     </div>
+
 </body>
 
 </html>

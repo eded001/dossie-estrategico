@@ -127,6 +127,25 @@
             height: 32px;
         }
 
+        /* SUPLENTES */
+        .suplentes-row {
+            background-color: #f4f6f8;
+            border-top: 1px solid #ddd;
+            padding: 5px 10px;
+            font-size: 8pt;
+            color: #333;
+            line-height: 1.2;
+            text-align: justify;
+        }
+
+        .suplentes-label {
+            color: var(--cs-blue);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-right: 5px;
+            font-size: 7.5pt;
+        }
+
         /* GRIDS E TABELAS */
         .grid-2 {
             display: grid;
@@ -146,11 +165,10 @@
             width: 100%;
             border-collapse: collapse;
             font-size: 9pt;
-            /* Reduzido levemente para ganhar espaço */
         }
 
         td {
-            padding: 5px 6px;
+            padding: 4px 6px;
             border-bottom: 1px solid #ddd;
             color: #222;
             vertical-align: middle;
@@ -176,15 +194,17 @@
             border-right: 1px solid #eee;
         }
 
+        /* CSS AJUSTADO PARA LEITURA COMPLETA DOS NOMES */
         .td-nome {
             font-weight: 700;
             padding-left: 8px;
-            /* REMOVIDO: white-space: nowrap e overflow: hidden */
+            white-space: normal;
+            /* Permite quebrar linha */
+            overflow: visible;
             max-width: none;
-            /* Permitir que use o espaço total da célula */
             text-transform: uppercase;
-            line-height: 1;
-            font-size: 8.5pt;
+            line-height: 1.05;
+            font-size: 8pt;
         }
 
         .td-voto {
@@ -194,24 +214,6 @@
             font-family: monospace;
             font-size: 10pt;
             white-space: nowrap;
-            /* Mantém números na mesma linha */
-        }
-
-        /* SUPLENTES */
-        .suplentes-row {
-            background-color: #f4f6f8;
-            border-top: 1px solid #ddd;
-            padding: 5px 10px;
-            font-size: 8.5pt;
-            color: #333;
-            line-height: 1.3;
-        }
-
-        .suplentes-label {
-            color: var(--cs-blue);
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-right: 5px;
         }
 
         /* RODAPÉ CELSO SABINO */
@@ -315,7 +317,7 @@
                 </tr>
                 <tr>
                     <td class="td-pos">2º</td>
-                    <td class="td-nome">BOLSONARO (PL) (N/E)</td>
+                    <td class="td-nome">BOLSONARO (PL) (NE)</td>
                     <td class="td-voto">3.696 (25,60%)</td>
                 </tr>
             </table>
@@ -332,17 +334,17 @@
                     </tr>
                     <tr>
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">ZEQUINHA MARINHO (PL) (N/E)</td>
+                        <td class="td-nome">ZEQUINHA MARINHO (PL) (NE)</td>
                         <td class="td-voto">1.366 (10,81%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">3º</td>
-                        <td class="td-nome">ADOLFO OLIVEIRA (PSOL) (N/E)</td>
+                        <td class="td-nome">ADOLFO OLIVEIRA (PSOL) (NE)</td>
                         <td class="td-voto">161 (1,27%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">4º</td>
-                        <td class="td-nome">DR. FELIPE (PRTB) (N/E)</td>
+                        <td class="td-nome">DR. FELIPE (PRTB) (NE)</td>
                         <td class="td-voto">12 (0,10%)</td>
                     </tr>
                 </table>
@@ -357,7 +359,7 @@
                     </tr>
                     <tr>
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">BODE (UNIÃO) (N/E)</td>
+                        <td class="td-nome">BODE (UNIÃO) (NE)</td>
                         <td class="td-voto">6.233 (41,38%)</td>
                     </tr>
                 </table>
@@ -365,7 +367,7 @@
         </div>
 
         <div class="box">
-            <div class="box-header"><i class="fas fa-users"></i> VEREADORES 2024 (TOP 11 ELEITOS + SUPLENTES)</div>
+            <div class="box-header"><i class="fas fa-users"></i> VEREADORES 2024 (TOP 15)</div>
             <div class="grid-2-inner">
                 <table>
                     <tr class="row-highlight">
@@ -427,22 +429,22 @@
                     </tr>
                     <tr>
                         <td class="td-pos">12º</td>
-                        <td class="td-nome">NEGO DO BENTO (MDB) (N/E)</td>
+                        <td class="td-nome">NEGO DO BENTO (MDB) (NE)</td>
                         <td class="td-voto">511 (3,39%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">13º</td>
-                        <td class="td-nome">JOSÉ MARIA (MDB) (N/E)</td>
+                        <td class="td-nome">JOSÉ MARIA (MDB) (NE)</td>
                         <td class="td-voto">483 (3,21%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">14º</td>
-                        <td class="td-nome">IVALMIR (PT) (N/E)</td>
+                        <td class="td-nome">IVALMIR (PT) (NE)</td>
                         <td class="td-voto">425 (2,82%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">15º</td>
-                        <td class="td-nome">FRANCILENE POSTO (PSD) (N/E)</td>
+                        <td class="td-nome">FRANCILENE POSTO (PSD) (NE)</td>
                         <td class="td-voto">358 (2,38%)</td>
                     </tr>
                     <tr>
@@ -473,7 +475,7 @@
                     </tr>
                     <tr>
                         <td class="td-pos">4º</td>
-                        <td class="td-nome">EDUARDO COSTA (PSD) (N/E)</td>
+                        <td class="td-nome">EDUARDO COSTA (PSD) (NE)</td>
                         <td class="td-voto">283 (2,11%)</td>
                     </tr>
                     <tr>
@@ -509,8 +511,7 @@
                 </table>
                 <div class="suplentes-row">
                     <span class="suplentes-label">* SUPLENTES:</span>
-                    CÁSSIO ANDRADE (PSB) (N/E); CRISTIANO VALE (PP) (N/E); PAULO BENGTSON (PTB) (N/E); ANA JÚLIA (PT)
-                    (N/E); LÚCIO VALE (PP) (N/E)
+                    CÁSSIO ANDRADE (PSB); CRISTIANO VALE (PP); PAULO BENGTSON (PTB); ANA JÚLIA (PT); LÚCIO VALE (PP)
                 </div>
             </div>
 
@@ -570,8 +571,8 @@
                 </table>
                 <div class="suplentes-row">
                     <span class="suplentes-label">* SUPLENTES:</span>
-                    PROFESSORA NILSE (PDT) (N/E); DRA. HELOISA (PSOL) (N/E); PASTORA RAY (MDB) (N/E); BETO ANDRADE (PSB)
-                    (N/E); DELEGADO CAVEIRA (PL) (E)
+                    PROFESSORA NILSE (PDT); DRA. HELOISA (PSOL); PASTORA RAY (MDB); BETO ANDRADE (PSB); DELEGADO CAVEIRA
+                    (PL)
                 </div>
             </div>
         </div>

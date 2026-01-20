@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dossiê PRIMAVERA - PA</title>
+    <title>Dossiê PRIMAVERA - PA (Auditado)</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -47,6 +47,8 @@
             --cs-amber: #ffcc00;
             --cs-light: #f4f6f8;
             --cs-green-bg: #e6f7e9;
+            --cs-red-bg: #ffe6e6;
+            --cs-red-text: #cc0000;
         }
 
         /* CABEÇALHO */
@@ -239,11 +241,12 @@
             color: #333;
         }
 
-        .cs-growth {
-            color: #00802b;
+        /* Estilo para crescimento negativo */
+        .cs-decline {
+            color: var(--cs-red-text);
             font-weight: 900;
             font-size: 12pt;
-            background: #e6f7e9;
+            background: var(--cs-red-bg);
             padding: 0 4px;
             border-radius: 3px;
         }
@@ -275,6 +278,12 @@
             border-color: #666;
         }
 
+        /* Bar new ajustada para queda */
+        .bar.new {
+            background: #cc0000;
+            border-color: #990000;
+        }
+
         @media print {
             body {
                 background: none;
@@ -296,7 +305,7 @@
             <div class="logo-box">CS</div>
             <div class="city-info">
                 <h1 class="city-name">PRIMAVERA - PA</h1>
-                <div class="city-meta">ELEITORES: 11.750</div>
+                <div class="city-meta">ELEITORES APTOS: 11.750</div>
             </div>
         </div>
 
@@ -400,7 +409,7 @@
                     </tr>
                     <tr>
                         <td class="td-pos">6º</td>
-                        <td class="td-nome">BOCA DE OURO (UNIÃO) (NE)</td>
+                        <td class="td-nome">BOCA DE OURO (UNIÃO) (S)</td>
                         <td class="td-voto">436 (4,61%)</td>
                     </tr>
                     <tr class="row-highlight">
@@ -427,27 +436,27 @@
                     </tr>
                     <tr>
                         <td class="td-pos">11º</td>
-                        <td class="td-nome">PROFESSOR GEOVANE (UNIÃO) (NE)</td>
+                        <td class="td-nome">PROFESSOR GEOVANE (UNIÃO)</td>
                         <td class="td-voto">321 (3,40%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">12º</td>
-                        <td class="td-nome">ADEMIR PAIXÃO (PT) (NE)</td>
+                        <td class="td-nome">ADEMIR PAIXÃO (PT)</td>
                         <td class="td-voto">316 (3,34%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">13º</td>
-                        <td class="td-nome">JUNIOR DE MANELITO (MDB) (NE)</td>
+                        <td class="td-nome">JUNIOR DE MANELITO (MDB)</td>
                         <td class="td-voto">311 (3,29%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">14º</td>
-                        <td class="td-nome">EDICLEI DO CALU (PT) (NE)</td>
+                        <td class="td-nome">EDICLEI DO CALU (PT)</td>
                         <td class="td-voto">303 (3,21%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">15º</td>
-                        <td class="td-nome">DIEGO DO POSTO (UNIÃO) (NE)</td>
+                        <td class="td-nome">DIEGO DO POSTO (UNIÃO)</td>
                         <td class="td-voto">296 (3,13%)</td>
                     </tr>
                     <tr>
@@ -459,63 +468,62 @@
 
         <div class="grid-2">
             <div class="box">
-                <div class="box-header"><i class="fas fa-university"></i> FEDERAL (TOP 10 LOCAL)</div>
+                <div class="box-header"><i class="fas fa-university"></i> FEDERAL (VOTAÇÃO REAL LOCAL)</div>
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
                         <td class="td-nome">ANTONIO DOIDO (MDB)</td>
                         <td class="td-voto">1.774 (20,11%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">CELSO SABINO (UNIÃO)</td>
-                        <td class="td-voto">1.579 (17,90%)</td>
-                    </tr>
-                    <tr>
-                        <td class="td-pos">3º</td>
                         <td class="td-nome">RENILCE NICODEMOS (MDB)</td>
                         <td class="td-voto">733 (8,31%)</td>
                     </tr>
-                    <tr>
-                        <td class="td-pos">4º</td>
+                    <tr class="row-highlight">
+                        <td class="td-pos">3º</td>
                         <td class="td-nome">DRA. ALESSANDRA (MDB)</td>
                         <td class="td-voto">550 (6,23%)</td>
                     </tr>
-                    <tr>
-                        <td class="td-pos">5º</td>
+                    <tr class="row-highlight">
+                        <td class="td-pos">4º</td>
                         <td class="td-nome">PRIANTE (MDB)</td>
                         <td class="td-voto">473 (5,36%)</td>
                     </tr>
-                    <tr>
-                        <td class="td-pos">6º</td>
+                    <tr class="row-highlight">
+                        <td class="td-pos">5º</td>
                         <td class="td-nome">HENDERSON PINTO (MDB)</td>
                         <td class="td-voto">215 (2,44%)</td>
                     </tr>
                     <tr>
-                        <td class="td-pos">7º</td>
+                        <td class="td-pos">6º</td>
                         <td class="td-nome">ELCIONE (MDB)</td>
                         <td class="td-voto">196 (2,22%)</td>
                     </tr>
                     <tr>
-                        <td class="td-pos">8º</td>
+                        <td class="td-pos">7º</td>
                         <td class="td-nome">DILVANDA FARO (PT)</td>
                         <td class="td-voto">171 (1,94%)</td>
                     </tr>
                     <tr>
-                        <td class="td-pos">9º</td>
+                        <td class="td-pos">8º</td>
                         <td class="td-nome">EDER MAURO (PL)</td>
                         <td class="td-voto">162 (1,84%)</td>
                     </tr>
                     <tr>
-                        <td class="td-pos">10º</td>
+                        <td class="td-pos">9º</td>
                         <td class="td-nome">JÚNIOR FERRARI (PSD)</td>
                         <td class="td-voto">148 (1,68%)</td>
                     </tr>
+                    <tr>
+                        <td class="td-pos">...</td>
+                        <td class="td-nome">CELSO SABINO (UNIÃO)</td>
+                        <td class="td-voto">83 (0,94%)</td>
+                    </tr>
                 </table>
                 <div class="suplentes-row">
-                    <span class="suplentes-label">* SUPLENTES:</span>
-                    CÁSSIO ANDRADE (PSB) 506 (5,74%) ; HÉLIO LEITE (UNIÃO) 329 (3,73%) ; LÚCIO VALE (MDB) 240 (2,72%) ;
-                    PAULO BENGTSON (PTB) 114 (1,29%) ; CRISTIANO VALE (PP) 102 (1,16%)
+                    <span class="suplentes-label">* OUTROS:</span>
+                    HÉLIO LEITE: 329 ; LÚCIO VALE: 240 ; PAULO BENGTSON: 114
                 </div>
             </div>
 
@@ -527,22 +535,22 @@
                         <td class="td-nome">PAULA TITAN (MDB)</td>
                         <td class="td-voto">1.838 (20,83%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">2º</td>
                         <td class="td-nome">RONIE SILVA (MDB)</td>
                         <td class="td-voto">1.096 (12,42%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">3º</td>
                         <td class="td-nome">ERICK MONTEIRO (PSDB)</td>
                         <td class="td-voto">788 (8,93%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">4º</td>
                         <td class="td-nome">CHICÃO (MDB)</td>
                         <td class="td-voto">719 (8,15%)</td>
                     </tr>
-                    <tr>
+                    <tr class="row-highlight">
                         <td class="td-pos">5º</td>
                         <td class="td-nome">DIANA BELO (MDB)</td>
                         <td class="td-voto">508 (5,76%)</td>
@@ -574,9 +582,8 @@
                     </tr>
                 </table>
                 <div class="suplentes-row">
-                    <span class="suplentes-label">* SUPLENTES:</span>
-                    BOCA DE OURO (UNIÃO) 412 (4,67%) ; MANOEL DA CARNE SOL (PSD) 289 (3,27%) ; TITÔNIO (MDB) 215 (2,44%)
-                    ; RENATA SOUSA (MDB) 198 (2,24%) ; BETO ANDRADE (PSB) 144 (1,63%)
+                    <span class="suplentes-label">* OUTROS:</span>
+                    PAULA GOMES: 85 ; DR JAQUES: 76 ; ANA CUNHA: 54
                 </div>
             </div>
         </div>
@@ -585,17 +592,17 @@
             <div class="cs-info">
                 <h3><i class="fas fa-chart-line"></i> CELSO SABINO NESTE MUNICÍPIO</h3>
                 <div class="cs-data">
-                    2018: <strong>765 (8,56%)</strong> | 2022: <strong>1.579 (17,90%)</strong><br>
-                    Crescimento: <span class="cs-growth">+106,4%</span><br>
-                    Total Acumulado: <strong>2.344 Votos</strong>
+                    2018: <strong>765 (8,56%)</strong> | 2022: <strong>83 (0,94%)</strong><br>
+                    DESEMPENHO: <span class="cs-decline">QUEDA DE 89,15% (-682 VOTOS)</span><br>
+                    TOTAL ACUMULADO: <strong>848 VOTOS</strong>
                 </div>
             </div>
             <div class="chart">
                 <div class="bar-group">
-                    <div class="bar old" style="height: 25px;"></div>2018
+                    <div class="bar old" style="height: 50px;"></div>2018
                 </div>
                 <div class="bar-group">
-                    <div class="bar new" style="height: 55px;"></div>2022
+                    <div class="bar new" style="height: 5px;"></div>2022
                 </div>
             </div>
         </div>
