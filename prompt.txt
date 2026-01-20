@@ -1,1 +1,14 @@
-corrija as inconsistências no código e retorne um arquivo novo substituindo cada uma
+Contexto: Sou Gestor de TI e possuo arquivos HTML que contêm dados das Eleições Municipais de 2024 de diversos municípios do Pará. Preciso de uma auditoria técnica e verificação de fatos (fact-checking) completa.
+Sua Missão: Atuar como um Especialista em Auditoria de Dados Eleitorais. Você deve analisar os arquivos anexados e validar 100% das informações neles contidas contra as fontes oficiais do TSE (Tribunal Superior Eleitoral) e do TRE-PA.
+Diretrizes de Verificação:
+
+Extração de Dados: Identifique em cada arquivo o Município, Cargo (Prefeito/Vereador), Nome do Candidato, Partido/Coligação, Total de Votos, Porcentagem e Status (Eleito, 2º Turno, Não Eleito, Sub Judice).
+Cruzamento de Fontes: Utilize sua capacidade de navegação para consultar o portal DivulgaCandContas e o sistema de Resultados 2024 do TSE.
+Critério de Precisão: Não aceite aproximações. Verifique se o número exato de votos e a grafia dos nomes correspondem ao registro oficial.
+Relatório de Discrepâncias: Se houver qualquer divergência (mesmo que um único voto ou erro de digitação), destaque isso imediatamente como um possível erro ou "Fake News".
+Confirmação Final: Ao final, emita um veredito para cada arquivo: "100% Verificado e Autêntico" ou "Contém Inconsistências".
+Instrução Especial: Se os dados de um candidato não puderem ser validados por fontes oficiais, classifique como "Não Verificado" e explique o motivo.
+
+---
+
+coloque todas as informações no template em anexo, sem mudar a formatação de nada
