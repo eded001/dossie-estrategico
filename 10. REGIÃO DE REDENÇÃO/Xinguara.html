@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossiê XINGUARA - Atualizado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CONFIGURAÇÃO DE IMPRESSÃO */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #555;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .page {
+            background-color: white;
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            padding: 10mm 15mm;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* CORES */
+        :root {
+            --cs-blue: #002266;
+            --cs-amber: #ffcc00;
+            --cs-light: #f4f6f8;
+            --cs-green-bg: #e6f7e9;
+        }
+
+        /* CABEÇALHO */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 5px solid var(--cs-amber);
+            padding-bottom: 10px;
+        }
+
+        .logo-box {
+            background: var(--cs-blue);
+            color: var(--cs-amber);
+            font-size: 28pt;
+            font-weight: 900;
+            padding: 5px 18px;
+            border: 3px solid var(--cs-amber);
+            border-radius: 6px;
+        }
+
+        .city-name {
+            font-size: 32pt;
+            font-weight: 900;
+            color: var(--cs-blue);
+            text-transform: uppercase;
+            line-height: 0.9;
+            margin: 0;
+            text-align: right;
+        }
+
+        .city-meta {
+            background: var(--cs-blue);
+            color: white;
+            padding: 4px 12px;
+            font-weight: bold;
+            font-size: 11pt;
+            border-radius: 4px;
+            margin-top: 5px;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        /* BOXES E TABELAS */
+        .box {
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            overflow: hidden;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            flex-grow: 1;
+        }
+
+        .box:first-of-type {
+            flex-grow: 0;
+        }
+
+        /* Presidente fixo */
+
+        .box-header {
+            background: var(--cs-blue);
+            color: white;
+            font-size: 10.5pt;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 8px 12px;
+            border-bottom: 3px solid var(--cs-amber);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        td {
+            padding: 6px 8px;
+            border-bottom: 1px solid #eee;
+            color: #222;
+            vertical-align: middle;
+            font-size: 9.5pt;
+        }
+
+        .td-pos {
+            width: 35px;
+            text-align: center;
+            font-weight: bold;
+            background: #f9f9f9;
+            color: #666;
+        }
+
+        .td-nome {
+            font-weight: 700;
+            padding-left: 10px;
+            white-space: normal;
+            /* Permite quebra de linha para leitura total */
+            line-height: 1.1;
+            word-wrap: break-word;
+        }
+
+        .td-voto {
+            width: 115px;
+            text-align: right;
+            font-weight: 900;
+            color: var(--cs-blue);
+        }
+
+        .row-highlight {
+            background: var(--cs-green-bg) !important;
+        }
+
+        /* GRIDS */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            flex-grow: 1;
+        }
+
+        .grid-2-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .grid-2-inner table:first-of-type {
+            border-right: 1px solid #ddd;
+        }
+
+        /* SUPLENTES */
+        .suplentes-row {
+            background-color: #f4f6f8;
+            border-top: 1px solid #ddd;
+            padding: 8px 12px;
+            font-size: 8.5pt;
+            line-height: 1.3;
+            margin-top: auto;
+        }
+
+        .suplentes-label {
+            color: var(--cs-blue);
+            font-weight: 900;
+            margin-right: 5px;
+        }
+
+        /* RODAPÉ CELSO SABINO */
+        .cs-area {
+            border: 3px solid var(--cs-amber);
+            background: #fff;
+            padding: 12px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 8px;
+            margin-top: 5px;
+            height: 100px;
+        }
+
+        .cs-info h3 {
+            margin: 0;
+            color: var(--cs-blue);
+            font-size: 13pt;
+            font-weight: 900;
+        }
+
+        .cs-data {
+            font-size: 11pt;
+            margin-top: 5px;
+            color: #333;
+        }
+
+        .cs-growth {
+            color: #00802b;
+            font-weight: 900;
+            background: #e6f7e9;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+            height: 60px;
+        }
+
+        .bar-group {
+            text-align: center;
+            font-size: 8pt;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .bar {
+            width: 35px;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .bar.old {
+            background: #bbb;
+        }
+
+        .bar.new {
+            background: var(--cs-blue);
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                height: 297mm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="header">
+            <div class="logo-box">CS</div>
+            <div style="text-align: right;">
+                <h1 class="city-name">XINGUARA</h1>
+                <div class="city-meta">ELEITORES: 33.377</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-header"><i class="fas fa-landmark"></i> PRESIDENTE 2022 (2º TURNO)</div>
+            <table>
+                <tr class="row-highlight">
+                    <td class="td-pos">1º</td>
+                    <td class="td-nome">BOLSONARO (PL)</td>
+                    <td class="td-voto">16.035 (60,67%)</td>
+                </tr>
+                <tr>
+                    <td class="td-pos">2º</td>
+                    <td class="td-nome">LULA (PT)</td>
+                    <td class="td-voto">10.415 (39,33%)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="grid-2">
+            <div class="box">
+                <div class="box-header"><i class="fas fa-user-tie"></i> GOVERNADOR 2022</div>
+                <table>
+                    <tr class="row-highlight">
+                        <td class="td-pos">1º</td>
+                        <td class="td-nome">HELDER (MDB)</td>
+                        <td class="td-voto">14.881 (61,04%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">2º</td>
+                        <td class="td-nome">ZEQUINHA MARINHO (PL)</td>
+                        <td class="td-voto">8.971 (36,80%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">3º</td>
+                        <td class="td-nome">ADOLFO OLIVEIRA (PSOL)</td>
+                        <td class="td-voto">321 (1,32%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">4º</td>
+                        <td class="td-nome">CLEBER RABELO (PSTU)</td>
+                        <td class="td-voto">141 (0,58%)</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="box">
+                <div class="box-header"><i class="fas fa-building"></i> PREFEITO 2024</div>
+                <table>
+                    <tr class="row-highlight">
+                        <td class="td-pos">1º</td>
+                        <td class="td-nome">OSVALDINHO (MDB)</td>
+                        <td class="td-voto">13.565 (50,29%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">2º</td>
+                        <td class="td-nome">ENRIC LAURIANO (PL)</td>
+                        <td class="td-voto">11.233 (41,65%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">3º</td>
+                        <td class="td-nome">AMARILDO PAULINO (SOLID)</td>
+                        <td class="td-voto">2.174 (8,06%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">4º</td>
+                        <td class="td-nome">-</td>
+                        <td class="td-voto">-</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-header"><i class="fas fa-users"></i> VEREADORES 2024 (TOP 15)</div>
+            <div class="grid-2-inner">
+                <table>
+                    <tr class="row-highlight">
+                        <td class="td-pos">1º</td>
+                        <td class="td-nome">LEANDRO GOMES (PSD) (E)</td>
+                        <td class="td-voto">1.155 (4,26%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">2º</td>
+                        <td class="td-nome">MOISÉS DO LANCHE (PL) (E)</td>
+                        <td class="td-voto">1.042 (3,84%)</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td class="td-pos">3º</td>
+                        <td class="td-nome">BIANCA DO GORDINHO (PL) (E)</td>
+                        <td class="td-voto">903 (3,33%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">4º</td>
+                        <td class="td-nome">SÉRGIO REIS (MDB) (E)</td>
+                        <td class="td-voto">890 (3,28%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">5º</td>
+                        <td class="td-nome">DRA. JANAÍNA (MDB) (E)</td>
+                        <td class="td-voto">851 (3,14%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">6º</td>
+                        <td class="td-nome">IRMÃO ADELSON (MDB) (E)</td>
+                        <td class="td-voto">830 (3,06%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">7º</td>
+                        <td class="td-nome">ZONIR ARANTES (MDB) (E)</td>
+                        <td class="td-voto">772 (2,85%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">8º</td>
+                        <td class="td-nome">WANDÃO DO ÔNIBUS (MDB) (E)</td>
+                        <td class="td-voto">760 (2,80%)</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td class="td-pos">9º</td>
+                        <td class="td-nome">MAURISAN ALENCAR (MDB) (NE)</td>
+                        <td class="td-voto">751 (2,77%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">10º</td>
+                        <td class="td-nome">LÉO DE DEUS (MDB) (NE)</td>
+                        <td class="td-voto">728 (2,68%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">11º</td>
+                        <td class="td-nome">ROBERTO UNIFAMA (PSD) (E)</td>
+                        <td class="td-voto">722 (2,66%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">12º</td>
+                        <td class="td-nome">MARLON DO VALE (PSD) (E)</td>
+                        <td class="td-voto">693 (2,55%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">13º</td>
+                        <td class="td-nome">NENÉM OFICINA (MDB) (NE)</td>
+                        <td class="td-voto">652 (2,40%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">14º</td>
+                        <td class="td-nome">EDELSON ASSENT. (PT) (E)</td>
+                        <td class="td-voto">639 (2,36%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">15º</td>
+                        <td class="td-nome">DRA. CLÁUDIA (MDB) (NE)</td>
+                        <td class="td-voto">601 (2,21%)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="height: 25px;"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="box">
+                <div class="box-header"><i class="fas fa-university"></i> FEDERAL (TOP 10 LOCAL)</div>
+                <table>
+                    <tr class="row-highlight">
+                        <td class="td-pos">1º</td>
+                        <td class="td-nome">DEL. CAVEIRA (PL)</td>
+                        <td class="td-voto">2.628 (10,74%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">2º</td>
+                        <td class="td-nome">CELSO SABINO (UNIÃO)</td>
+                        <td class="td-voto">2.083 (8,51%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">3º</td>
+                        <td class="td-nome">KENISTON (MDB)</td>
+                        <td class="td-voto">1.050 (4,29%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">4º</td>
+                        <td class="td-nome">ALESSANDRA HABER (MDB)</td>
+                        <td class="td-voto">759 (3,10%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">5º</td>
+                        <td class="td-nome">JOSÉ PRIANTE (MDB)</td>
+                        <td class="td-voto">647 (2,64%)</td>
+                    </tr>
+                </table>
+                <div class="suplentes-row">
+                    <span class="suplentes-label">* SUPLENTES:</span>
+                    JOAQUIM PASSARINHO (PL) 1.583; EDUARDO COSTA (PTB) 651; LENA PINTO (PSDB) 496.
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-header"><i class="fas fa-flag"></i> ESTADUAL (TOP 10 LOCAL)</div>
+                <table>
+                    <tr class="row-highlight">
+                        <td class="td-pos">1º</td>
+                        <td class="td-nome">CHAMONZINHO (MDB)</td>
+                        <td class="td-voto">4.882 (20,08%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">2º</td>
+                        <td class="td-nome">AVEILTON SOUZA (PL)</td>
+                        <td class="td-voto">1.956 (8,04%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">3º</td>
+                        <td class="td-nome">ROGÉRIO BARRA (PL)</td>
+                        <td class="td-voto">1.109 (4,56%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">4º</td>
+                        <td class="td-nome">CILENE COUTO (PSDB)</td>
+                        <td class="td-voto">711 (2,92%)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-pos">5º</td>
+                        <td class="td-nome">BORDALO (PT)</td>
+                        <td class="td-voto">412 (1,69%)</td>
+                    </tr>
+                </table>
+                <div class="suplentes-row">
+                    <span class="suplentes-label">* SUPLENTES:</span>
+                    ALEX OHANA (PL) 1.053; VICTOR DIAS (UNIÃO) 884; JOÃO DE DEUS (REDE) 811.
+                </div>
+            </div>
+        </div>
+
+        <div class="cs-area">
+            <div class="cs-info">
+                <h3><i class="fas fa-chart-line"></i> PERFORMANCE CELSO SABINO</h3>
+                <div class="cs-data">
+                    2018: <strong>1.411 (6,32%)</strong> | 2022: <strong>2.083 (8,51%)</strong><br>
+                    Crescimento: <span class="cs-growth">+672 votos (+47,6%)</span><br>
+                    Total Acumulado: <strong>3.494 Votos</strong>
+                </div>
+            </div>
+            <div class="chart">
+                <div class="bar-group">
+                    <div class="bar old" style="height: 40px;"></div>2018
+                </div>
+                <div class="bar-group">
+                    <div class="bar new" style="height: 60px;"></div>2022
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

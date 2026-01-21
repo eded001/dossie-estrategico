@@ -1,1 +1,84 @@
-corrija as inconsistências no código e retorne um arquivo novo substituindo cada uma
+CONTEXTO: Atue como um Investigador Forense de Dados Eleitorais.
+Estou solicitando os dados oficiais EXATOS do município de [BELÉM] - PARÁ.
+PROTOCOLO DE BUSCA: Varra as tabelas detalhadas de apuração (Gazeta do Povo, UOL, G1, TSE).
+REGRA DE OURO (FORMATO): Para TODOS os candidatos listados abaixo, forneça: Nome | Partido | Votos | %
+BUSQUE E LISTE RIGOROSAMENTE NESTA ORDEM:
+1. DADOS GERAIS (2024)
+
+Eleitorado Total Apto:
+2. PRESIDENTE 2022 (2º Turno NESTA CIDADE)
+
+Lula (PT) | [Votos] | [%]
+Bolsonaro (PL) | [Votos] | [%]
+3. GOVERNADOR 2022 (1º Turno NESTA CIDADE)
+
+Top 4 mais votados na cidade:
+Nome | Partido | Votos | %
+4. PREFEITO 2024 (Resultado Final)
+
+Liste do 1º ao 4º colocado:
+Nome | Partido | Votos | %
+5. VEREADORES 2024 (TOP 15 MAIS VOTADOS)
+
+Critério: Liste os 15 candidatos com maior votação nominal, independente se entraram ou não.
+STATUS OBRIGATÓRIO:
+Se foi ELEITO, adicione (E) ao final do nome.
+Se NÃO FOI ELEITO (mas teve voto para estar no Top 15), adicione (NE).
+Exemplo: JOÃO (MDB) (E) ... MARIA (PL) (NE)
+6. DEPUTADO FEDERAL 2022 (VOTAÇÃO NA CIDADE)
+
+A) QUADRO PRINCIPAL (APENAS ELEITOS):
+Liste os 10 Candidatos ELEITOS mais votados dentro deste município.
+Formato: Nome | Partido | Votos | %
+B) SUPLENTES RELEVANTES (APENAS NÃO ELEITOS):
+Liste 5 Candidatos NÃO ELEITOS que tiveram grande votação neste município.
+Formato: Nome | Partido | Votos | %
+7. DEPUTADO ESTADUAL 2022 (VOTAÇÃO NA CIDADE)
+
+A) QUADRO PRINCIPAL (APENAS ELEITOS):
+Liste os 10 Candidatos ELEITOS mais votados dentro deste município.
+Formato: Nome | Partido | Votos | %
+B) SUPLENTES RELEVANTES (APENAS NÃO ELEITOS):
+Liste 5 Candidatos NÃO ELEITOS que tiveram grande votação neste município.
+Formato: Nome | Partido | Votos | %
+8. CELSO SABINO (AUDITORIA FORENSE)
+
+Busque especificamente o nome "Celso Sabino" nas listas da cidade.
+2018 (PSDB): [Votos] | [%]
+2022 (União/PL): [Votos] | [%]
+Crescimento: (Diferença e %)
+SAÍDA: Apenas a lista de dados limpa.
+
+---
+
+Agora usando esses dados que acabou de achar, gere um arquivo HTML Completo para este município.
+
+REGRAS RÍGIDAS DE LAYOUT:
+
+Use EXATAMENTE o template HTML/CSS ANEXADO. Não mude tamanhos de fonte, cores ou estrutura.
+
+O objetivo é preencher a página A4 inteira.
+
+Substitua os dados entre [...] pelos dados reais que você pesquisou.
+
+TEMPLATE MESTRE  EM ANEXO (HTML COMPLETO):
+o comando foi  Nome | Partido | Votos | % (Não omita o Partido e nem a Porcentagem em nenhum cargo).
+
+evite que alguns estejam so com porcentagem, outros só com votos, outros sem partido
+
+---
+
+Contexto: Sou Gestor de TI e possuo arquivos HTML que contêm dados das Eleições Municipais de 2024 de diversos municípios do Pará. Preciso de uma auditoria técnica e verificação de fatos (fact-checking) completa.
+Sua Missão: Atuar como um Especialista em Auditoria de Dados Eleitorais. Você deve analisar os arquivos anexados e validar 100% das informações neles contidas contra as fontes oficiais do TSE (Tribunal Superior Eleitoral) e do TRE-PA.
+Diretrizes de Verificação:
+
+Extração de Dados: Identifique em cada arquivo o Município, Cargo (Prefeito/Vereador), Nome do Candidato, Partido/Coligação, Total de Votos, Porcentagem e Status (Eleito, 2º Turno, Não Eleito, Sub Judice).
+Cruzamento de Fontes: Utilize sua capacidade de navegação para consultar o portal Divulga Cand Contas e o sistema de Resultados 2024 do TSE.
+Critério de Precisão: Não aceite aproximações. Verifique se o número exato de votos e a grafia dos nomes correspondem ao registro oficial.
+Relatório de Discrepâncias: Se houver qualquer divergência (mesmo que um único voto ou erro de digitação), destaque isso imediatamente como um possível erro ou "Fake News".
+Confirmação Final: Ao final, emita um veredito para cada arquivo: "100% Verificado e Autêntico" ou "Contém Inconsistências".
+Instrução Especial: Se os dados de um candidato não puderem ser validados por fontes oficiais, classifique como "Não Verificado" e explique o motivo.
+
+---
+
+atualize os dados do documento sem mexer na formatação e afins. atualize e mexa somente nos dados do documento e retorne um doc novo seguindo os parâmetros indicados
