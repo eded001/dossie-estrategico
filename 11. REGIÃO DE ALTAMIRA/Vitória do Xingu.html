@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dossiê TERRA SANTA - PA</title>
+    <title>Dossiê VITÓRIA DO XINGU - PA</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -131,14 +131,10 @@
         .suplentes-row {
             background-color: #f4f6f8;
             border-top: 1px solid #ddd;
-            padding: 4px 8px;
-            /* Reduzido levemente */
-            font-size: 8pt;
-            /* Reduzido levemente para caber melhor */
+            padding: 5px 10px;
+            font-size: 8.5pt;
             color: #333;
-            line-height: 1.2;
-            text-align: justify;
-            /* Justificado para melhor leitura */
+            line-height: 1.3;
         }
 
         .suplentes-label {
@@ -170,8 +166,7 @@
         }
 
         td {
-            /* Padding reduzido para compensar a quebra de linha dos nomes e manter tudo na página */
-            padding: 3px 6px;
+            padding: 5px 8px;
             border-bottom: 1px solid #ddd;
             color: #222;
             vertical-align: middle;
@@ -188,8 +183,7 @@
         }
 
         .td-pos {
-            width: 30px;
-            /* Reduzido levemente */
+            width: 35px;
             text-align: center;
             font-weight: bold;
             color: #555;
@@ -200,20 +194,11 @@
 
         .td-nome {
             font-weight: 600;
-            padding-left: 8px;
-
-            /* --- ALTERAÇÕES AQUI --- */
-            white-space: normal;
-            /* Permite quebrar linha */
-            overflow: visible;
-            /* Mostra todo o conteúdo */
-            text-overflow: clip;
-            /* Remove os "..." */
-            max-width: none;
-            /* Remove limite de largura */
-            line-height: 1.1;
-            /* Altura da linha mais justa para nomes longos */
-            /* ----------------------- */
+            padding-left: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 180px;
         }
 
         .td-voto {
@@ -221,23 +206,19 @@
             font-weight: 900;
             color: var(--cs-blue);
             font-family: monospace;
-            font-size: 10.5pt;
-            /* Levemente ajustado */
-            white-space: nowrap;
-            /* Mantém votos na mesma linha */
+            font-size: 11pt;
         }
 
         /* RODAPÉ CELSO SABINO */
         .cs-area {
             border: 3px solid var(--cs-amber);
             background: linear-gradient(to right, #fff, #fffbf0);
-            padding: 10px 20px;
+            padding: 12px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             border-radius: 8px;
-            height: 90px;
-            /* Reduzido levemente */
+            height: 95px;
             margin-top: 5px;
         }
 
@@ -259,10 +240,10 @@
         }
 
         .cs-growth {
-            color: #cc0000;
+            color: #00802b;
             font-weight: 900;
             font-size: 12pt;
-            background: #ffe6e6;
+            background: #e6f7e9;
             padding: 0 4px;
             border-radius: 3px;
         }
@@ -314,23 +295,23 @@
         <div class="header">
             <div class="logo-box">CS</div>
             <div class="city-info">
-                <h1 class="city-name">TERRA SANTA - PA</h1>
-                <div class="city-meta">ELEITORES: 15.282</div>
+                <h1 class="city-name">VITÓRIA DO XINGU - PA</h1>
+                <div class="city-meta">ELEITORES APTOS: 17.717</div>
             </div>
         </div>
 
         <div class="box">
-            <div class="box-header"><i class="fas fa-landmark"></i> PRESIDENTE 2022 (VOTAÇÃO LOCAL)</div>
+            <div class="box-header"><i class="fas fa-landmark"></i> PRESIDENTE 2022 (2º TURNO - LOCAL)</div>
             <table>
                 <tr class="row-highlight">
                     <td class="td-pos">1º</td>
-                    <td class="td-nome">LULA (PT)</td>
-                    <td class="td-voto">6.114 (56,86%)</td>
+                    <td class="td-nome">JAIR BOLSONARO (PL)</td>
+                    <td class="td-voto">5.734 (51,97%)</td>
                 </tr>
                 <tr>
                     <td class="td-pos">2º</td>
-                    <td class="td-nome">BOLSONARO (PL)</td>
-                    <td class="td-voto">4.076 (37,91%)</td>
+                    <td class="td-nome">LULA (PT)</td>
+                    <td class="td-voto">5.300 (48,03%)</td>
                 </tr>
             </table>
         </div>
@@ -342,22 +323,22 @@
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
                         <td class="td-nome">HELDER BARBALHO (MDB)</td>
-                        <td class="td-voto">8.039 (78,52%)</td>
+                        <td class="td-voto">7.292 (67,66%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">2º</td>
                         <td class="td-nome">ZEQUINHA MARINHO (PL)</td>
-                        <td class="td-voto">1.671 (16,32%)</td>
+                        <td class="td-voto">3.437 (31,89%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">3º</td>
-                        <td class="td-nome">DR. FELIPE (PRTB)</td>
-                        <td class="td-voto">466 (4,55%)</td>
+                        <td class="td-nome">ADOLFO OLIVEIRA (PSOL)</td>
+                        <td class="td-voto">36 (0,33%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">4º</td>
-                        <td class="td-nome">ADOLFO OLIVEIRA (PSOL)</td>
-                        <td class="td-voto">45 (0,44%)</td>
+                        <td class="td-nome">DR. FELIPE (PRTB)</td>
+                        <td class="td-voto">4 (0,04%)</td>
                     </tr>
                 </table>
             </div>
@@ -366,108 +347,108 @@
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
-                        <td class="td-nome">SIQUEIRA FONSECA (REP)</td>
-                        <td class="td-voto">5.692 (44,04%)</td>
+                        <td class="td-nome">MÁRCIO VIANA (MDB)</td>
+                        <td class="td-voto">11.593 (79,85%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">JACIARA PICANÇO (PSD)</td>
-                        <td class="td-voto">5.675 (43,91%)</td>
+                        <td class="td-nome">MURILO SOUSA (UNIÃO)</td>
+                        <td class="td-voto">2.623 (18,07%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">3º</td>
-                        <td class="td-nome">ADALBERTO ANEQUINO (MDB)</td>
-                        <td class="td-voto">1.557 (12,05%)</td>
+                        <td class="td-nome">PRETINHO CUIABANO (PL)</td>
+                        <td class="td-voto">268 (1,85%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">4º</td>
-                        <td class="td-nome">-</td>
-                        <td class="td-voto">-</td>
+                        <td class="td-nome">MACAPÁ (PSOL)</td>
+                        <td class="td-voto">35 (0,24%)</td>
                     </tr>
                 </table>
             </div>
         </div>
 
         <div class="box">
-            <div class="box-header"><i class="fas fa-users"></i> VEREADORES 2024 (TOP 15)</div>
+            <div class="box-header"><i class="fas fa-users"></i> VEREADORES 2024 (TOP MAIS VOTADOS)</div>
             <div class="grid-2-inner">
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
-                        <td class="td-nome">ESAÚ FERREIRA (PSD) (E)</td>
-                        <td class="td-voto">869 (6,78%)</td>
+                        <td class="td-nome">ANDERSON RIBEIRO (PSB) (E)</td>
+                        <td class="td-voto">1.142 (7,80%)</td>
                     </tr>
                     <tr class="row-highlight">
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">ARCINDO FARIAS (MDB) (E)</td>
-                        <td class="td-voto">714 (5,57%)</td>
+                        <td class="td-nome">EDCARLOS UCHOA (PSB) (E)</td>
+                        <td class="td-voto">1.077 (7,36%)</td>
                     </tr>
                     <tr class="row-highlight">
                         <td class="td-pos">3º</td>
-                        <td class="td-nome">PROF. MILENILDO (PSD) (E)</td>
-                        <td class="td-voto">657 (5,13%)</td>
+                        <td class="td-nome">DIEGO FERNANDES (PSB) (E)</td>
+                        <td class="td-voto">1.045 (7,14%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">4º</td>
-                        <td class="td-nome">MILENILSON FREITAS (REP) (E)</td>
-                        <td class="td-voto">655 (5,11%)</td>
+                        <td class="td-nome">WILSINHO CASTRO (MDB) (E)</td>
+                        <td class="td-voto">947 (6,47%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">5º</td>
-                        <td class="td-nome">ISAURA MARINHO (PSD) (E)</td>
-                        <td class="td-voto">640 (4,99%)</td>
+                        <td class="td-nome">IVANILZE DUARTE (MDB) (E)</td>
+                        <td class="td-voto">769 (5,25%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">6º</td>
-                        <td class="td-nome">MIGUEL NETO (REP) (NE)</td>
-                        <td class="td-voto">609 (4,75%)</td>
+                        <td class="td-nome">ENF. ROSELI BRAGA (MDB) (E)</td>
+                        <td class="td-voto">626 (4,28%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">7º</td>
-                        <td class="td-nome">ERILSON SANTOS (PSD) (E)</td>
-                        <td class="td-voto">559 (4,36%)</td>
+                        <td class="td-nome">RAIMUNDO SOUSA (MDB) (E)</td>
+                        <td class="td-voto">598 (4,08%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">8º</td>
-                        <td class="td-nome">VALDIR MATHEUS (PSD) (E)</td>
-                        <td class="td-voto">492 (3,84%)</td>
+                        <td class="td-nome">DILCI NAPOLEÃO (MDB) (NE)</td>
+                        <td class="td-voto">593 (4,05%)</td>
                     </tr>
                 </table>
                 <table>
                     <tr>
                         <td class="td-pos">9º</td>
-                        <td class="td-nome">SERRÃO (PSD) (NE)</td>
-                        <td class="td-voto">469 (3,66%)</td>
+                        <td class="td-nome">MARCOS TOTA (MDB) (NE)</td>
+                        <td class="td-voto">592 (4,04%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">10º</td>
-                        <td class="td-nome">MARCÍLIO (PL) (E)</td>
-                        <td class="td-voto">438 (3,42%)</td>
+                        <td class="td-nome">AILTINHO (MDB) (NE)</td>
+                        <td class="td-voto">560 (3,83%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">11º</td>
-                        <td class="td-nome">NETO RIBEIRO (DC) (E)</td>
-                        <td class="td-voto">432 (3,37%)</td>
+                        <td class="td-nome">NEGUINHO DA SAÚDE (SOL) (E)</td>
+                        <td class="td-voto">523 (3,57%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">12º</td>
-                        <td class="td-nome">PROF. SYNTHYA (MDB) (E)</td>
-                        <td class="td-voto">407 (3,18%)</td>
+                        <td class="td-nome">NENÉM DO CAETANO (PSB) (E)</td>
+                        <td class="td-voto">522 (3,57%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">13º</td>
-                        <td class="td-nome">NATINHO DA COLÔNIA (UNIÃO) (E)</td>
-                        <td class="td-voto">401 (3,13%)</td>
+                        <td class="td-nome">OZEIAS (UNIÃO) (NE)</td>
+                        <td class="td-voto">~500 (Resid.)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">14º</td>
-                        <td class="td-nome">CLÓVIS MACHADO (UNIÃO) (E)</td>
-                        <td class="td-voto">302 (2,36%)</td>
+                        <td class="td-nome">IRMÃO ABIAS (UNIÃO) (NE)</td>
+                        <td class="td-voto">~450 (Resid.)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">15º</td>
-                        <td class="td-nome">-</td>
-                        <td class="td-voto">-</td>
+                        <td class="td-nome">PRETIM (MDB) (NE)</td>
+                        <td class="td-voto">~420 (Resid.)</td>
                     </tr>
                     <tr>
                         <td colspan="3" style="height: 33px; border:none;"></td>
@@ -478,124 +459,122 @@
 
         <div class="grid-2">
             <div class="box">
-                <div class="box-header"><i class="fas fa-university"></i> FEDERAL (TOP LOCAL - ELEITOS)</div>
+                <div class="box-header"><i class="fas fa-university"></i> FEDERAL (TOP 10 LOCAL)</div>
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
-                        <td class="td-nome">PRIANTE (MDB)</td>
-                        <td class="td-voto">3.059 (29,46%)</td>
+                        <td class="td-nome">RENILCE NICODEMOS (MDB)</td>
+                        <td class="td-voto">4.267 (37,94%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">2º</td>
                         <td class="td-nome">JÚNIOR FERRARI (PSD)</td>
-                        <td class="td-voto">2.943 (28,34%)</td>
+                        <td class="td-voto">980 (8,71%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">3º</td>
-                        <td class="td-nome">HENDERSON PINTO (MDB)</td>
-                        <td class="td-voto">511 (4,92%)</td>
+                        <td class="td-nome">CELSO SABINO (UNIÃO)</td>
+                        <td class="td-voto">713 (6,34%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">4º</td>
-                        <td class="td-nome">DRA ALESSANDRA (MDB)</td>
-                        <td class="td-voto">389 (3,75%)</td>
+                        <td class="td-nome">DEL. EDER MAURO (PL)</td>
+                        <td class="td-voto">601 (5,34%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">5º</td>
-                        <td class="td-nome">DEL. ÉDER MAURO (PL)</td>
-                        <td class="td-voto">358 (3,45%)</td>
+                        <td class="td-nome">ANTONIO DOIDO (MDB)</td>
+                        <td class="td-voto">334 (2,97%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">6º</td>
-                        <td class="td-nome">OLIVAL MARQUES (MDB)</td>
-                        <td class="td-voto">249 (2,40%)</td>
+                        <td class="td-nome">AIRTON FALEIRO (PT)</td>
+                        <td class="td-voto">266 (2,36%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">7º</td>
-                        <td class="td-nome">ANDREIA SIQUEIRA (MDB)</td>
-                        <td class="td-voto">170 (1,64%)</td>
+                        <td class="td-nome">JOAQUIM PASSARINHO (PL)</td>
+                        <td class="td-voto">230 (2,04%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">8º</td>
-                        <td class="td-nome">AIRTON FALEIRO (PT)</td>
-                        <td class="td-voto">Residual</td>
+                        <td class="td-nome">DELEGADO CAVEIRA (PL)</td>
+                        <td class="td-voto">228 (2,03%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">9º</td>
-                        <td class="td-nome">ELCIONE BARBALHO (MDB)</td>
-                        <td class="td-voto">Residual</td>
+                        <td class="td-nome">PRIANTE (MDB)</td>
+                        <td class="td-voto">~150 (<1,5%)< /td>
                     </tr>
                     <tr>
                         <td class="td-pos">10º</td>
-                        <td class="td-nome">KENISTON BRAGA (MDB)</td>
-                        <td class="td-voto">Residual</td>
+                        <td class="td-nome">ELCIONE (MDB)</td>
+                        <td class="td-voto">~120 (<1,5%)< /td>
                     </tr>
                 </table>
                 <div class="suplentes-row">
                     <span class="suplentes-label">* SUPLENTES:</span>
-                    LENA PINTO (PSDB) 554 (5,34%) ; JOÃO CORAGEM (PRTB) 199 (1,92%) ; WELLINGTON GALDINO (PSC) 184
-                    (1,77%)
+                    CÁSSIO ANDRADE (PSB) 742 (6,60%) ; LOREDAN (PTB) 318 (2,83%) ; WAGNE MACHADO (MDB) ~100 (0,9%)
                 </div>
             </div>
 
             <div class="box">
-                <div class="box-header"><i class="fas fa-flag"></i> ESTADUAL (TOP LOCAL - ELEITOS)</div>
+                <div class="box-header"><i class="fas fa-flag"></i> ESTADUAL (TOP 10 LOCAL)</div>
                 <table>
                     <tr class="row-highlight">
                         <td class="td-pos">1º</td>
-                        <td class="td-nome">ANGELO FERRARI (MDB)</td>
-                        <td class="td-voto">1.813 (17,17%)</td>
+                        <td class="td-nome">ERALDO PIMENTA (MDB)</td>
+                        <td class="td-voto">1.873 (16,70%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">2º</td>
-                        <td class="td-nome">GUSTAVO SEFER (PSD)</td>
-                        <td class="td-voto">276 (2,61%)</td>
+                        <td class="td-nome">FÁBIO FIGUEIRAS (PSB)</td>
+                        <td class="td-voto">869 (7,75%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">3º</td>
-                        <td class="td-nome">JOSUÉ PAIVA (REP)</td>
-                        <td class="td-voto">270 (2,56%)</td>
+                        <td class="td-nome">DIRCEU TEN CATEN (PT)</td>
+                        <td class="td-voto">751 (6,70%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">4º</td>
-                        <td class="td-nome">MARIA DO CARMO (PT)</td>
-                        <td class="td-voto">138 (1,31%)</td>
+                        <td class="td-nome">GUSTAVO SEFER (PSD)</td>
+                        <td class="td-voto">565 (5,04%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">5º</td>
-                        <td class="td-nome">CHAMONZINHO (MDB)</td>
-                        <td class="td-voto">Residual</td>
+                        <td class="td-nome">DEL. NILTON NEVES (PSD)</td>
+                        <td class="td-voto">507 (4,52%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">6º</td>
-                        <td class="td-nome">IRAN LIMA (MDB)</td>
-                        <td class="td-voto">Residual</td>
+                        <td class="td-nome">ROGERIO BARRA (PL)</td>
+                        <td class="td-voto">376 (3,35%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">7º</td>
-                        <td class="td-nome">CHICÃO (MDB)</td>
-                        <td class="td-voto">Residual</td>
+                        <td class="td-nome">ANGELO FERRARI (MDB)</td>
+                        <td class="td-voto">364 (3,25%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">8º</td>
-                        <td class="td-nome">CILENE COUTO (PSDB)</td>
-                        <td class="td-voto">Residual</td>
+                        <td class="td-nome">CHAMONZINHO (MDB)</td>
+                        <td class="td-voto">~300 (2,70%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">9º</td>
-                        <td class="td-nome">LUTH REBELO (PP)</td>
-                        <td class="td-voto">Residual</td>
+                        <td class="td-nome">RONIE SILVA (MDB)</td>
+                        <td class="td-voto">~250 (2,20%)</td>
                     </tr>
                     <tr>
                         <td class="td-pos">10º</td>
-                        <td class="td-nome">ZECA PIRÃO (MDB)</td>
-                        <td class="td-voto">Residual</td>
+                        <td class="td-nome">IRAN LIMA (MDB)</td>
+                        <td class="td-voto">~200 (1,80%)</td>
                     </tr>
                 </table>
                 <div class="suplentes-row">
-                    <span class="suplentes-label">* NÃO ELEITOS (ALTA VOTAÇÃO):</span>
-                    SIQUEIRA FONSECA (PRTB) 3.605 (34,14%) ; ERLON ROCHA (MDB) 1.156 (10,95%) ; JOSÉ MARIA TAPAJÓS (PP)
-                    582 (5,51%)
+                    <span class="suplentes-label">* SUPLENTES:</span>
+                    JOSY AMARAL (MDB) 931 (8,30%) ; MARQUINHO (PODE) 701 (6,25%) ; OZORIO JUVENIL (MDB) 431 (3,84%)
                 </div>
             </div>
         </div>
@@ -604,17 +583,17 @@
             <div class="cs-info">
                 <h3><i class="fas fa-chart-line"></i> CELSO SABINO NESTE MUNICÍPIO</h3>
                 <div class="cs-data">
-                    2018: <strong>Residual (< 50)</strong> | 2022: <strong>Residual (< 50)</strong><br>
-                                    Crescimento: <span class="cs-growth">ESTÁVEL (BAIXO)</span><br>
-                                    Total Acumulado: <strong>Inexpressivo</strong>
+                    2018: <strong>0 (0,00%)</strong> | 2022: <strong>713 (6,34%)</strong><br>
+                    Crescimento: <span class="cs-growth">+713 Votos (Nova Base)</span><br>
+                    Total Acumulado: <strong>713 Votos</strong>
                 </div>
             </div>
             <div class="chart">
                 <div class="bar-group">
-                    <div class="bar old" style="height: 5px;"></div>2018
+                    <div class="bar old" style="height: 2px;"></div>2018
                 </div>
                 <div class="bar-group">
-                    <div class="bar new" style="height: 5px;"></div>2022
+                    <div class="bar new" style="height: 50px;"></div>2022
                 </div>
             </div>
         </div>

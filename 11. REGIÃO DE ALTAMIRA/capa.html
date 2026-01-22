@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Capa Região</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =========================================
+           CSS DA IDENTIDADE VISUAL (CS)
+           ========================================= */
+        :root {
+            --cs-blue: #002266;
+            --cs-amber: #ffcc00;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #555;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        /* CONFIGURAÇÃO DA PÁGINA BASE */
+        .page {
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+            display: flex;
+            /* Essencial para centralizar o conteúdo da capa */
+            flex-direction: column;
+        }
+
+        /* =========================================
+           ESTILOS ESPECÍFICOS DA CAPA DE REGIÃO
+           ========================================= */
+
+        /* O fundo azul com as bordas duplas */
+        .section-page {
+            background-color: var(--cs-blue);
+            color: white;
+            justify-content: center;
+            /* Centraliza Verticalmente */
+            align-items: center;
+            /* Centraliza Horizontalmente */
+            text-align: center;
+
+            /* O Truque da Borda Dupla */
+            border: 20px solid white;
+            /* Borda interna branca */
+            outline: 5px solid var(--cs-amber);
+            /* Borda externa amarela */
+            outline-offset: -20px;
+            /* Faz o amarelo ficar entre o branco e o azul */
+        }
+
+        /* Título da Região (ex: REGIÃO 01) */
+        .section-title {
+            font-size: 60pt;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+            /* Sombra para dar peso */
+        }
+
+        /* Subtítulo (ex: 5 MUNICÍPIOS) */
+        .section-subtitle {
+            font-size: 24pt;
+            color: var(--cs-amber);
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            border-top: 2px solid var(--cs-amber);
+            border-bottom: 2px solid var(--cs-amber);
+            padding: 10px 40px;
+            display: inline-block;
+        }
+
+        /* Ajuste para impressão */
+        @media print {
+            body {
+                background: none;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page section-page">
+        <div>
+            <div class="section-title">
+                REGIÃO REGIÃO DE BREVES<br>
+            </div>
+            <div class="section-subtitle">
+                9 MUNICÍPIOS ESTRATÉGICOS
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

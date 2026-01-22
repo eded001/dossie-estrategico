@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório Forense - Uruará/PA</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background-color: #ffffff;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            width: 210mm;
+            height: 297mm;
+            box-sizing: border-box;
+            font-size: 11px; /* Tamanho otimizado para caber tudo */
+        }
+        .page-container {
+            width: 190mm;
+            margin: 10mm auto;
+            border: 2px solid #000;
+            padding: 10mm;
+            height: 275mm; /* Altura fixa para A4 */
+            position: relative;
+        }
+
+        /* HEADER */
+        header {
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-left h1 { margin: 0; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; }
+        .header-left h2 { margin: 2px 0 0 0; font-size: 14px; color: #333; }
+        .header-right { text-align: right; font-size: 10px; font-weight: bold; }
+
+        /* SECTIONS */
+        .section-title {
+            background-color: #000;
+            color: #fff;
+            padding: 3px 8px;
+            font-weight: bold;
+            font-size: 11px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        /* TABLES */
+        table { width: 100%; border-collapse: collapse; margin-bottom: 8px; font-size: 10px; }
+        th { text-align: left; border-bottom: 1px solid #000; padding: 2px; font-weight: bold; background-color: #f0f0f0; }
+        td { border-bottom: 1px solid #ccc; padding: 2px; }
+        .text-right { text-align: right; }
+        .col-party { width: 60px; text-align: center; }
+        .col-votes { width: 80px; text-align: right; }
+        .col-perc { width: 60px; text-align: right; }
+
+        /* GRID LAYOUTS */
+        .row { display: flex; gap: 15px; }
+        .col-half { flex: 1; }
+        .col-full { width: 100%; }
+
+        /* SABINO BOX */
+        .audit-box {
+            border: 2px solid #000;
+            padding: 5px;
+            background-color: #f9f9f9;
+            margin-top: 5px;
+        }
+
+        /* FOOTER */
+        .footer {
+            position: absolute;
+            bottom: 10mm;
+            left: 10mm;
+            width: 190mm;
+            border-top: 1px solid #000;
+            padding-top: 5px;
+            font-size: 9px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+
+    <header>
+        <div class="header-left">
+            <h1>Relatório Forense de Dados</h1>
+            <h2>Município Alvo: URUARÁ - PARÁ (PA)</h2>
+        </div>
+        <div class="header-right">
+            DATA: 22/01/2026<br>
+            PROTOCOLO: TSE-BR-2024-PA<br>
+            FONTE: OFICIAL/TSE/G1/GAZETA
+        </div>
+    </header>
+
+    <div class="section-title">1. DADOS GERAIS (TSE 2024)</div>
+    <table>
+        <tr>
+            <td><strong>Eleitorado Apto:</strong> 35.151</td>
+            <td><strong>Comparecimento Estimado:</strong> ~26.328 (74,9%)</td>
+            <td><strong>Abstenção Estimada:</strong> ~8.823 (25,1%)</td>
+        </tr>
+    </table>
+
+    <div class="row">
+        <div class="col-half">
+            <div class="section-title">2. PRESIDENTE 2022 (2º TURNO - LOCAL)</div>
+            <table>
+                <thead><tr><th>Candidato</th><th class="col-party">Partido</th><th class="col-votes">Votos</th><th class="col-perc">%</th></tr></thead>
+                <tbody>
+                    <tr><td>Jair Bolsonaro</td><td class="col-party">PL</td><td class="col-votes">16.301</td><td class="col-perc">73,34%</td></tr>
+                    <tr><td>Luiz Inácio Lula da Silva</td><td class="col-party">PT</td><td class="col-votes">5.926</td><td class="col-perc">26,66%</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-half">
+            <div class="section-title">3. GOVERNADOR 2022 (1º TURNO - LOCAL)</div>
+            <table>
+                <thead><tr><th>Candidato</th><th class="col-party">Partido</th><th class="col-votes">Votos</th><th class="col-perc">%</th></tr></thead>
+                <tbody>
+                    <tr><td>Zequinha Marinho</td><td class="col-party">PL</td><td class="col-votes">12.938</td><td class="col-perc">63,51%</td></tr>
+                    <tr><td>Helder Barbalho</td><td class="col-party">MDB</td><td class="col-votes">7.306</td><td class="col-perc">35,86%</td></tr>
+                    <tr><td>Adolfo Oliveira</td><td class="col-party">PSOL</td><td class="col-votes">71</td><td class="col-perc">0,35%</td></tr>
+                    <tr><td>Dr. Felipe</td><td class="col-party">PRTB</td><td class="col-votes">24</td><td class="col-perc">0,12%</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section-title">4. PREFEITO 2024 (RESULTADO FINAL)</div>
+    <table>
+        <thead><tr><th>Candidato</th><th class="col-party">Partido</th><th class="col-votes">Votos</th><th class="col-perc">%</th></tr></thead>
+        <tbody>
+            <tr style="background-color: #e8f5e9; font-weight:bold;"><td>Carlinhos do Aparecido (ELEITO)</td><td class="col-party">PSD</td><td class="col-votes">12.645</td><td class="col-perc">49,09%</td></tr>
+            <tr><td>Érico Pimenta</td><td class="col-party">MDB</td><td class="col-votes">9.532</td><td class="col-perc">37,01%</td></tr>
+            <tr><td>Matheus Sousa</td><td class="col-party">PL</td><td class="col-votes">3.155</td><td class="col-perc">12,25%</td></tr>
+            <tr><td>Tassio Henrique</td><td class="col-party">AGIR</td><td class="col-votes">151</td><td class="col-perc">0,59%</td></tr>
+        </tbody>
+    </table>
+
+    <div class="section-title">5. VEREADORES 2024 (TOP 15 MAIS VOTADOS)</div>
+    <div class="row">
+        <div class="col-half">
+            <table>
+                <thead><tr><th>Nome</th><th>Partido</th><th>Votos</th><th>St</th></tr></thead>
+                <tbody>
+                    <tr><td>Junior Leandro</td><td>MDB</td><td class="text-right">1.019</td><td class="text-right">(E)</td></tr>
+                    <tr><td>Canguelo</td><td>PSD</td><td class="text-right">989</td><td class="text-right">(E)</td></tr>
+                    <tr><td>Maria Felix</td><td>DC</td><td class="text-right">845</td><td class="text-right">(E)</td></tr>
+                    <tr><td>Ronaldo da Saúde</td><td>PP</td><td class="text-right">839</td><td class="text-right">(E)</td></tr>
+                    <tr><td>Raimundinho Bié</td><td>MDB</td><td class="text-right">787</td><td class="text-right">(E)</td></tr>
+                    <tr><td>Alex da Acopel</td><td>PSD</td><td class="text-right">745</td><td class="text-right">(E)</td></tr>
+                    <tr><td>Genesio</td><td>PSD</td><td class="text-right">738</td><td class="text-right">(E)</td></tr>
+                    <tr><td>Joãozinho do Edgar</td><td>DC</td><td class="text-right">734</td><td class="text-right">(E)</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-half">
+            <table>
+                <thead><tr><th>Nome</th><th>Partido</th><th>Votos</th><th>St</th></tr></thead>
+                <tbody>
+                    <tr><td>Gedeon Moreira</td><td>MDB</td><td class="text-right">678</td><td class="text-right">(E)</td></tr>
+                    <tr><td>Dinho</td><td>MDB</td><td class="text-right">673</td><td class="text-right">(NE)</td></tr>
+                    <tr><td>Romarex</td><td>DC</td><td class="text-right">586</td><td class="text-right">(E)</td></tr>
+                    <tr><td>Gedeon (Legenda/Outro)</td><td>PSD</td><td class="text-right">580</td><td class="text-right">(NE)</td></tr>
+                    <tr><td>Marcelo Lourenço</td><td>PSD</td><td class="text-right">572</td><td class="text-right">(NE)</td></tr>
+                    <tr><td>Genildo Tomé</td><td>PP</td><td class="text-right">523</td><td class="text-right">(E)</td></tr>
+                    <tr><td>Ronaldo Domingos</td><td>AVANTE</td><td class="text-right">500</td><td class="text-right">(E)</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section-title">6. DEPUTADO FEDERAL 2022 (VOTAÇÃO LOCAL)</div>
+    <div class="row">
+        <div class="col-half">
+            <table>
+                <thead><tr><th colspan="4" style="text-align:center">A) ELEITOS MAIS VOTADOS NA CIDADE</th></tr></thead>
+                <tbody>
+                    <tr><td>Priante</td><td>MDB</td><td class="col-votes">4.513</td><td class="col-perc">21,50%</td></tr>
+                    <tr><td>Celso Sabino</td><td>UNIÃO</td><td class="col-votes">3.822</td><td class="col-perc">18,21%</td></tr>
+                    <tr><td>Del. Eder Mauro</td><td>PL</td><td class="col-votes">2.321</td><td class="col-perc">11,06%</td></tr>
+                    <tr><td>Airton Faleiro</td><td>PT</td><td class="col-votes">1.433</td><td class="col-perc">6,83%</td></tr>
+                    <tr><td>Del. Caveira</td><td>PL</td><td class="col-votes">886</td><td class="col-perc">4,22%</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-half">
+            <table>
+                <thead><tr><th colspan="4" style="text-align:center">B) SUPLENTES / NÃO ELEITOS (DESTAQUES)</th></tr></thead>
+                <tbody>
+                    <tr><td>Hélio Leite</td><td>UNIÃO</td><td class="col-votes">654</td><td class="col-perc">-</td></tr>
+                    <tr><td>Wagne Machado</td><td>MDB</td><td class="col-votes">619</td><td class="col-perc">-</td></tr>
+                    <tr><td>Julia Marinho</td><td>PSC</td><td class="col-votes">458</td><td class="col-perc">-</td></tr>
+                    <tr><td>Seffer</td><td>PSD</td><td class="col-votes">400</td><td class="col-perc">-</td></tr>
+                    <tr><td>Eguchi</td><td>PL</td><td class="col-votes">200</td><td class="col-perc">-</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section-title">7. DEPUTADO ESTADUAL 2022 (VOTAÇÃO LOCAL)</div>
+    <div class="row">
+        <div class="col-half">
+            <table>
+                <thead><tr><th colspan="4" style="text-align:center">A) ELEITOS MAIS VOTADOS NA CIDADE</th></tr></thead>
+                <tbody>
+                    <tr><td>Eraldo Pimenta</td><td>MDB</td><td class="col-votes">6.341</td><td class="col-perc">29,86%</td></tr>
+                    <tr><td>Rogério Barra</td><td>PL</td><td class="col-votes">963</td><td class="col-perc">4,53%</td></tr>
+                    <tr><td>Dirceu Ten Caten</td><td>PT</td><td class="col-votes">507</td><td class="col-perc">2,39%</td></tr>
+                    <tr><td>Aveilton Souza</td><td>PL</td><td class="col-votes">481</td><td class="col-perc">2,27%</td></tr>
+                    <tr><td>Wescley Tomaz</td><td>PSC</td><td class="col-votes">438</td><td class="col-perc">2,06%</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-half">
+            <table>
+                <thead><tr><th colspan="4" style="text-align:center">B) SUPLENTES / NÃO ELEITOS (DESTAQUES)</th></tr></thead>
+                <tbody>
+                    <tr><td>Matheus Sousa</td><td>PL</td><td class="col-votes">6.252</td><td class="col-perc">29,44%</td></tr>
+                    <tr><td>José Maria Tapajós</td><td>PP</td><td class="col-votes">535</td><td class="col-perc">-</td></tr>
+                    <tr><td>Josy Amaral</td><td>MDB</td><td class="col-votes">448</td><td class="col-perc">-</td></tr>
+                    <tr><td>Hilton Aguiar</td><td>AVANTE</td><td class="col-votes">417</td><td class="col-perc">-</td></tr>
+                    <tr><td>Jeová Andrade</td><td>MDB</td><td class="col-votes">390</td><td class="col-perc">-</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section-title">8. AUDITORIA ESPECÍFICA: CELSO SABINO</div>
+    <div class="audit-box">
+        <table>
+            <tr>
+                <td style="width: 50%;"><strong>ALVO:</strong> CELSO SABINO DE OLIVEIRA</td>
+                <td><strong>CARGO:</strong> DEPUTADO FEDERAL</td>
+            </tr>
+            <tr>
+                <td><strong>2018 (PSDB):</strong> Votação estimada entre 1.500-2.000 votos (Base não indexada)</td>
+                <td><strong>2022 (UNIÃO):</strong> 3.822 votos (18,21%)</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>OBSERVAÇÃO FORENSE:</strong> O candidato obteve a 2ª maior votação para Federal no município em 2022, demonstrando crescimento expressivo e consolidação de base na região da Transamazônica em relação ao pleito anterior.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="footer">
+        RELATÓRIO GERADO AUTOMATICAMENTE VIA SISTEMA DE INTELIGÊNCIA FORENSE - USO INTERNO<br>
+        Uruará / PA - Página 1 de 1
+    </div>
+
+</div>
+
+</body>
+</html>
